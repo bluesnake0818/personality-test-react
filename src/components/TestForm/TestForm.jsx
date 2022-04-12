@@ -17,35 +17,35 @@ const TestForm = () => {
   }
 
   return (
-      <section className={styles.slider}>
-        <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
-        <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} />
-        {TestFormData.map((slide, index) => {
-          return (
-            <div className={index === current ? 'slide active' : 'slide'} key={index}>
-              {
-                index === current && 
-                (
-                  <>
-                    {/* <img src={ slide.image } alt="zodiac image" className={styles.image} /> */}
-                    {/* <div className={styles.desc}> */}
-                      <h1>{slide.number}</h1>
-                      <h3>{slide.question}</h3>
-                      <ul>
-                        <li>{slide.choice_1}</li>
-                        <li>{slide.choice_2}</li>
-                        <li>{slide.choice_3}</li>
-                        <li>{slide.choice_4}</li>
-                      </ul>
-                      {/* <Link to='/PremiumContent'><button className={styles.button}>Learn More</button></Link>     */}
-                    {/* </div> */}
-                  </>
-                )
-              }
-            </div>
-          ) 
-        })}  
-      </section>
+    <section className={styles.card}>
+      <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
+      <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} />
+      {TestFormData.map((slide, index) => {
+        return (
+          <div className={index === current ? 'slide active' : 'slide'} key={index}>
+            {
+              index === current && 
+              (
+                <>
+                <div className={styles.questionArea}>
+                  <h1 className={styles.questionNo}>{slide.number}</h1>
+                  <h3 className={styles.question}>{slide.question}</h3>
+                </div>
+                <div className={styles.listArea}>
+                  <ul className={styles.list}>
+                    <li><button className={styles.btn}>{slide.choice_1}</button></li>
+                    <li><button className={styles.btn}>{slide.choice_2}</button></li>
+                    <li><button className={styles.btn}>{slide.choice_3}</button></li>
+                    <li><button className={styles.btn}>{slide.choice_4}</button></li>
+                  </ul>
+                </div>
+                </>
+              )
+            }
+          </div>
+        ) 
+      })}  
+    </section>
   )
 }
 

@@ -18,14 +18,14 @@ const PersonalityTest = () => {
             <li><button className={styles.btn}>Excited!</button></li>
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className={styles.footer}>
         <p>Copyright 2022 HangFive, Inc.</p>
         <p>All rights reserved.</p>
       </div>
       <div className={styles.footerInLine}>
         <p>Copyright 2022 HangFive, Inc. All rights reserved.</p>
-      </div> */}
+      </div>
     </main>
   )
 }
