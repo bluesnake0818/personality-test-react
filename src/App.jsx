@@ -35,7 +35,7 @@ const App = () => {
         />
         <Route
           path="/result"
-          element={<Result />}
+          element={<Result handleLogout={handleLogout} />}
         />
         <Route
           path="/signup"

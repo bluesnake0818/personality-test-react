@@ -1,10 +1,10 @@
-// import { ZodiacData } from './ZodiacData';
+import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Result.module.css'
 
 
-const Result = () => {
+const Result = (props) => {
   // const [zodiacs, setZodiacs] = useState(ZodiacData)
   // const [zodiacObj, setZodiacObj] = useState(
   //   {} 
@@ -24,7 +24,7 @@ const Result = () => {
 
   return (
     <div className={styles.container}>
-      {1===1 ?
+      {1===0 ?
         <div className={styles.loading}>
           <h1 className={styles.title}>Loading...</h1>
           <img src="/monkey_3d.png" className={styles.image}/>
@@ -32,52 +32,62 @@ const Result = () => {
           <p className={styles.note}>Buckle up!</p>
         </ div>
         :
-        <div></div>
-        // <div className={styles.container}>
-        //   <h2>{props.profile.name}'s Profile</h2>
-        //   <img src={yourZodImg} alt="" className={styles.profileImage}/>
+        <div className={styles.result}>
+          <div className={styles.myTypeCard}>
+            <h1 className={styles.title}>The Bulldozing Rabbit</h1>
+            <img src='/rabbit_3d.png' alt="" className={styles.image}/>
+            <p>Chart</p>
+            <p className={styles.desc}>{ZodiacData[3].desc}</p>
+          </div>
 
-        //   <h3>Description</h3>
-        //   <div className={styles.card}>
-        //     <ul className={styles.list}>
-        //       <li className={styles.listItem}>Zodiac Sign: {zodiacObj.name}</li>
-        //       <li className={styles.listItem}>{zodiacObj.archetype}</li>
-        //       <li className={styles.listItem}>{zodiacObj.desc}</li>
-        //     </ul>
-        //   </div>
+          <div className={styles.card}>
+            <h5 className={styles.category}>Best friend to hang with</h5>
+            <h3 className={styles.name}>The ever-cautious dog</h3>  
+            <img src='/dog_3d.png' alt="" className={styles.image}/>
+            <p className={styles.desc}>description</p>
+          </div>
 
-        //   <h3>Celebs in {yourZod}</h3>
-        //   <div className={styles.card}>
-        //     <ul className={styles.list}>  
-        //       <li className={styles.listItem}> {zodiacObj.celeb1}</li>
-        //       <li className={styles.listItem}> {zodiacObj.celeb2}</li>
-        //       <li className={styles.listItem}> {zodiacObj.celeb3}</li>
-        //     </ul>
-        //   </div>
+          <div className={styles.card}>
+            <h5 className={styles.category}>They make you a better person</h5>
+            <h3 className={styles.name}>The curious goat</h3>  
+            <img src='/goat_3d.png' alt="" className={styles.image}/>
+            <p className={styles.desc}>description</p>
+          </div>
 
-        //   <h3>Your best friend</h3>
-        //   <div className={styles.card}>
-        //     <ul className={styles.list}>  
-        //       <li className={styles.listItem}>
-        //         <p>Most Compatible: {zodiacObj.bff}</p>
-        //         <img className={styles.image} src={yourBffImg} alt="" />
-        //       </li>
-        //     </ul>
-        //   </div>
+          <div className={styles.downloadCard}>
+            <h5 className={styles.category}>Meet more friends at hangfive app</h5>
+            <img src='/app_store.png' alt="" className={styles.appStoreImg}/>
+            <img src='/app_preview.png' alt="" className={styles.appPreviewImg}/>
+          </div>
 
-        //   <h3>Your worst enemy</h3>
-        //   <div className={styles.card}>
-        //     <ul className={styles.list}>  
-        //       <li className={styles.listItem}>
-        //         <p>Worst Enemy: {zodiacObj.nemesis}</p>
-        //         <img className={styles.image} src={yourNemesisImg} alt="" />
-        //       </li>
-        //     </ul>
-        //   </div>
-        //   <Link to="" onClick={props.handleLogout}>
-        //       <button className={styles.button}>Log Out</button>
-        //   </Link>
-        // </div>
+          <div className={styles.shareCard}>
+            <h5 className={styles.shareTitle}>Share my personality type</h5>
+            <div className={styles.shareButtons}>
+              <img src='/Facebook.png' alt="" className={styles.icon}/>
+              <img src='/Twitter.png' alt="" className={styles.icon}/>
+              <img src='/Instagram.png' alt="" className={styles.icon}/>
+              <img src='/URL.png' alt="" className={styles.icon}/>
+            </div>
+          </div>
+          {/* <Link to="" onClick={props.handleLogout}> */}
+          <div className={styles.buttonArea}>
+            <button className={styles.retakeButton}>Re-take</button>
+            <button className={styles.saveButton}>Save</button>
+          </div>
+          {/* </Link> */}
+
+
+          {/* <Link to="" onClick={props.handleLogout}>
+              <button className={styles.button}>Log Out</button>
+          </Link> */}
+          <div className={styles.footer}>
+            <p>Copyright 2022 HangFive, Inc.</p>
+            <p>All rights reserved.</p>
+          </div>
+          <div className={styles.footerInLine}>
+            <p>Copyright 2022 HangFive, Inc. All rights reserved.</p>
+          </div>
+        </div>
       }
     </div>
   )
