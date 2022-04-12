@@ -1,0 +1,46 @@
+export const SliderData = [
+  { 
+    number: 'Q.01',
+    question: 'I started to develop feelings for someone I knew already.',
+    choice_1: 'Does she/he come with a problem?',
+    choice_2: 'Start picturing the future together',
+    choice_3: 'Check my feelings over and over',
+    choice_4: 'Excited!',
+  },
+  { 
+    number: 'Q.02',
+    question: 'Who will I share the latest development in feelings with?',
+    choice_1: 'Only with my best friend',
+    choice_2: 'Everyone in my personal life',
+    choice_3: 'Reddit',
+    choice_4: 'No one',
+  },
+  { 
+    number: 'Q.03',
+    question: '',
+    choice_1: '',
+    choice_2: '',
+    choice_3: '',
+    choice_4: '',
+  },
+  { 
+    number: 'Q.04',
+    question: '',
+    choice_1: '',
+    choice_2: '',
+    choice_3: '',
+    choice_4: '',
+  },
+  { 
+    number: 'Q.05',
+    question: '',
+    choice_1: '',
+    choice_2: '',
+    choice_3: '',
+    choice_4: '',
+  },
+  { 
+    number: 'Q.06',
+    question: '',
+  },    
+]
