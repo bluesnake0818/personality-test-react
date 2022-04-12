@@ -69,6 +69,7 @@ button {
   font-size: 1.6rem;
   transition: none;
   box-shadow: none;
+  font-family: var(--mochiy_pop_one);
 }
 
 button:hover {
