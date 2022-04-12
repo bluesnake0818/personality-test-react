@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
+import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
@@ -36,6 +37,10 @@ const App = () => {
         <Route
           path="/result"
           element={<Result handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/signup-or-login"
+          element={<SignupOrLogin />}
         />
         <Route
           path="/signup"
