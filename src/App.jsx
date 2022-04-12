@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import PersonalityTest from './pages/PersonalityTest/PersonalityTest'
+import Result from './pages/Result/Result'
 import * as authService from './services/authService'
 
 const App = () => {
@@ -31,6 +32,10 @@ const App = () => {
         <Route
           path="/personality-test"
           element={<PersonalityTest />}
+        />
+        <Route
+          path="/result"
+          element={<Result />}
         />
         <Route
           path="/signup"
