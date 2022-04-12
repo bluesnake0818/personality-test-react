@@ -9,11 +9,11 @@ const TestForm = () => {
   const length = TestFormData.length
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ?  0 : current + 1)
+    current === length - 1 ?  alert('end of form') : setCurrent(current + 1)
   }
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current -1)
+    current === 0 ? alert('beginning of form') : setCurrent(current === 0 ? length - 1 : current -1)
   }
 
   return (
