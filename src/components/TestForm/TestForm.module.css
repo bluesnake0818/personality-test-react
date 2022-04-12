@@ -1,0 +1,71 @@
+.slider {
+  position: relative;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+/* .image {
+  width: 30rem;
+  height: 30rem;
+  margin: 0 auto;
+} */
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 3.2rem;
+  font-size: 3rem;
+  color: #ffffff;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 3.2rem;
+  font-size: 3rem;
+  color: #ffffff;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 40rem;
+}
+
+h1{
+  text-align: left;
+  font-size: 3.2rem;
+}
+
+/* .desc {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30rem;
+} */
+
+/* .bff, .nemesis{
+  width: 15rem;
+} */
+
+/* .button {
+  margin-top: 7rem;
+} */

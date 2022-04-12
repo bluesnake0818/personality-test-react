@@ -1,4 +1,4 @@
-export const SliderData = [
+export const TestFormData = [
   { 
     number: 'Q.01',
     question: 'I started to develop feelings for someone I knew already.',
@@ -17,30 +17,30 @@ export const SliderData = [
   },
   { 
     number: 'Q.03',
-    question: '',
-    choice_1: '',
-    choice_2: '',
-    choice_3: '',
-    choice_4: '',
+    question: 'You encounter he/she for the first time after your realization!',
+    choice_1: 'Awkward Turtle...',
+    choice_2: 'Maintain Poker Face',
+    choice_3: 'Nervous',
+    choice_4: 'Let them know discreetly',
   },
   { 
     number: 'Q.04',
-    question: '',
-    choice_1: '',
-    choice_2: '',
-    choice_3: '',
-    choice_4: '',
+    question: 'He/she picked up your i-Phone you left in class and returned it to you',
+    choice_1: 'Awkward thank you',
+    choice_2: 'Thanks. Would you like to get a cup of coffee?',
+    choice_3: '(catch my feelings) smile hard',
+    choice_4: 'natural small talk',
   },
   { 
     number: 'Q.05',
-    question: '',
-    choice_1: '',
-    choice_2: '',
-    choice_3: '',
-    choice_4: '',
+    question: 'You learned through a friend that he/she was recently asked out by someone else',
+    choice_1: 'Jealous! Search on Instagram',
+    choice_2: 'Already heart broken',
+    choice_3: 'huh! I must be better!',
+    choice_4: 'I should asked him/her out as quickly as possible',
   },
   { 
     number: 'Q.06',
-    question: '',
+    question: 'What is your birth year?',
   },    
 ]

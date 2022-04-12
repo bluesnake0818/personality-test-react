@@ -1,9 +1,11 @@
 import styles from './PersonalityTest.module.css'
+import TestForm from '../../components/TestForm/TestForm'
 
 const PersonalityTest = () => {
   return (
     <main className={styles.container}>
-      <div className={styles.card}>
+      <TestForm />
+      {/* <div className={styles.card}>
         <div className={styles.questionArea}>
           <h1 className={styles.questionNo}>Q.01</h1>
           <h3 className={styles.question}>I started to develop feelings for someone I knew already.</h3>
@@ -23,7 +25,7 @@ const PersonalityTest = () => {
       </div>
       <div className={styles.footerInLine}>
         <p>Copyright 2022 HangFive, Inc. All rights reserved.</p>
-      </div>
+      </div> */}
     </main>
   )
 }
