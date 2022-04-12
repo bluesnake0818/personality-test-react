@@ -1,4 +1,5 @@
 import styles from './Landing.module.css'
+import { Link } from 'react-router-dom'
 
 const Landing = ({ user }) => {
   return (
@@ -11,7 +12,7 @@ const Landing = ({ user }) => {
             <h3 className={styles.subtitle}>How do I react when I discover I have a crush?</h3>
           </div>
           <img className={styles.image} src="/rabbit_3d.png" alt="bunny"/>
-          <button className={styles.btn}>Start Test</button>
+          <Link to='/personality-test' className={styles.link}><button className={styles.btn} id='start_button'>Start Test</button></Link>
         </div>
           <div className={styles.imageArea}>
             <img className={styles.imageBig} src="/rabbit_3d.png" alt="bunny"/>
