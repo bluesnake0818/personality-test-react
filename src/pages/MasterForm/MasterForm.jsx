@@ -7,6 +7,7 @@ import Step5 from "./components/Step5"
 import Step6 from "./components/Step6"
 import ProgressBar from '@ramonak/react-progress-bar'
 import styles from './MasterForm.module.css'
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 
 
 class MasterForm extends react.Component {
@@ -77,11 +78,12 @@ nextButton(){
   let currentStep = this.state.currentStep;
   if(currentStep <6){
     return (
-      <button 
-        className="btn btn-primary float-right" 
-        type="button" onClick={this._next}>
-      Next
-      </button>        
+      // <button 
+      //   className="btn btn-primary float-right" 
+      //   type="button" onClick={this._next}>
+      // Next
+      <FaArrowAltCircleRight className={styles.rightArrow} onClick={this._next} />
+      // </button>        
     )
   }
   return null;

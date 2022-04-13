@@ -36,3 +36,22 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 4rem;
+  /* color: #000000; */
+  color: #6661F1;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .rightArrow {
+    /* color: #ffffff; */
+    color: #6661F1;
+  }
+}
