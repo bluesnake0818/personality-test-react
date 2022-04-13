@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+
+/* 
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.listItem {
+  border-color: #6661f1;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+}
+
+.friendListTitle {
+  display: flex;
+  justify-content: flex-start;
+  width: 34rem;
+}
+
+.friendListTitleParagraph {
+  margin-bottom: 0;
+  margin-top: 4rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+} */

@@ -1,5 +1,6 @@
 import styles from './SignupOrLogin.module.css'
 import { Link } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 
 const SignupOrLogin = props => {
   return (
@@ -14,6 +15,7 @@ const SignupOrLogin = props => {
           </Link>
         </div>
       </div>
+      <Footer />
     </main>
   )
 }
