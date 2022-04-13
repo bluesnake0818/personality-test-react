@@ -10,7 +10,6 @@ import Profile from './pages/Profile/Profile'
 import PersonalityTest from './pages/PersonalityTest/PersonalityTest'
 import Result from './pages/Result/Result'
 import EditTest from './pages/EditTest/EditTest'
-import MasterForm from './pages/MasterForm/MasterForm'
 import * as authService from './services/authService'
 import * as personalityService from './services/personalityService'
 
@@ -26,15 +25,10 @@ const App = () => {
     navigate('/')
   }
 
-  // const handleAddPersonality = async newPersonalityData => {
-  //   const newPersonality = await personalityService.create(newPersonalityData)
-  //   setPersonalities([...personalities, newPersonality])
-  //   navigate('/master-form')
-  // }
-
   const addPersonality = async (personalityData) => {
     const personality = await personalityService.create(personalityData)
     setPersonalities([...personalities, personality])
+    navigate('/result')
   }
 
   const handleSignupOrLogin = () => {
@@ -48,7 +42,7 @@ const App = () => {
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/personality-test"
-          element={<PersonalityTest />}
+          element={<PersonalityTest addPersonality={addPersonality}/>}
         />
         <Route
           path="/result"
@@ -77,10 +71,6 @@ const App = () => {
         <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/master-form"
-          element={<MasterForm />}
         />
       </Routes>
     </>
