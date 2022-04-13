@@ -2,6 +2,7 @@ import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Result.module.css'
+import BarChart from '../../components/BarChart/BarChart';
 
 
 const Result = (props) => {
@@ -36,7 +37,7 @@ const Result = (props) => {
           <div className={styles.myTypeCard}>
             <h1 className={styles.title}>The Bulldozing Rabbit</h1>
             <img src='/rabbit_3d.png' alt="" className={styles.image}/>
-            <p>Chart</p>
+            <BarChart />
             <p className={styles.desc}>{ZodiacData[3].desc}</p>
           </div>
 
