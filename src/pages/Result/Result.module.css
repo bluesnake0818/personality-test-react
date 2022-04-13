@@ -23,11 +23,17 @@
 
 .list {
   list-style: none;
+  padding: 0;
+}
+
+.descTitle {
+  font-size: 1.6rem;
 }
 
 .desc {
   font-size: 1.4rem;
 }
+
 
 .title {
   text-align: center;

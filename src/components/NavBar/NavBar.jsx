@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import styles from './NavBar.module.css'
+import ProgressBar from '@ramonak/react-progress-bar'
+// import ProgressBar from '../ProgressBar/ProgressBar'
+
 // import PersonIcon from '@mui/icons-material/Person'
 // import ExtensionIcon from '@mui/icons-material/Extension';
 // import LogoutIcon from '@mui/icons-material/Logout';
@@ -44,6 +47,16 @@ const NavBar = ({ user, handleLogout }) => {
           </nav>
         } 
       </div>
+      <ProgressBar 
+        className={styles.progress}
+        completed="1"
+        bgColor="#6661F1"
+        height="10px"
+        baseBgColor="#c4c4c4"
+        labelColor="#ffffff"
+        labelSize="8px"
+        maxCompleted="6"
+      />
     </main>
   )
 }

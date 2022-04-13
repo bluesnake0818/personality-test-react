@@ -39,12 +39,30 @@ const Result = (props) => {
             <img src='/rabbit_3d.png' alt="" className={styles.image}/>
             <BarChart />
             <ul className={styles.list}>
-              <li><p className={styles.desc}>{ZodiacData[3].desc1}</p></li>
-              <li><p className={styles.desc}>{ZodiacData[3].desc2}</p></li>
-              <li><p className={styles.desc}>{ZodiacData[3].desc3}</p></li>
-              <li><p className={styles.desc}>{ZodiacData[3].desc4}</p></li>
-              <li><p className={styles.desc}>{ZodiacData[3].desc5}</p></li>
-              <li><p className={styles.desc}>{ZodiacData[3].desc6}</p></li>
+              <li>
+                <h5 className={styles.descTitle}>First Impressions</h5>
+                <p className={styles.desc}>{ZodiacData[3].desc1}</p>
+              </li>
+              <li>
+                <h5 className={styles.descTitle}>Love at Second sight</h5>
+                <p className={styles.desc}>{ZodiacData[3].desc2}</p>
+              </li>
+              <li>
+                <h5 className={styles.descTitle}>Third Vibe's the Charm</h5>
+                <p className={styles.desc}>{ZodiacData[3].desc3}</p>
+              </li>
+              <li>
+                <h5 className={styles.descTitle}>...But Wait, There's Four!</h5>
+                <p className={styles.desc}>{ZodiacData[3].desc4}</p>
+              </li>
+              <li>
+                <h5 className={styles.descTitle}>Your Weaknesses: Death, ...</h5>
+                <p className={styles.desc}>{ZodiacData[3].desc5}</p>
+              </li>
+              <li>
+                <h5 className={styles.descTitle}>...and Bills, and...</h5>
+                <p className={styles.desc}>{ZodiacData[3].desc6}</p>
+              </li>
             </ul>
             
           </div>
