@@ -38,7 +38,15 @@ const Result = (props) => {
             <h1 className={styles.title}>The Bulldozing Rabbit</h1>
             <img src='/rabbit_3d.png' alt="" className={styles.image}/>
             <BarChart />
-            <p className={styles.desc}>{ZodiacData[3].desc}</p>
+            <ul className={styles.list}>
+              <li><p className={styles.desc}>{ZodiacData[3].desc1}</p></li>
+              <li><p className={styles.desc}>{ZodiacData[3].desc2}</p></li>
+              <li><p className={styles.desc}>{ZodiacData[3].desc3}</p></li>
+              <li><p className={styles.desc}>{ZodiacData[3].desc4}</p></li>
+              <li><p className={styles.desc}>{ZodiacData[3].desc5}</p></li>
+              <li><p className={styles.desc}>{ZodiacData[3].desc6}</p></li>
+            </ul>
+            
           </div>
 
           <div className={styles.card}>

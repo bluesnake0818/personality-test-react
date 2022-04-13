@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './BarChart.module.css'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -36,7 +37,8 @@ export const options = {
     },
     legend: {
       display: false,
-    }
+    },
+
   },
 };
 
@@ -48,17 +50,21 @@ export const data = {
     {
       data: [90, 76, 48, 82],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.8)',
-        'rgba(54, 162, 235, 0.8)',
-        'rgba(255, 206, 86, 0.8)',
-        'rgba(75, 192, 192, 0.8)',
+        '#ADFF5B',
+        '#63C7FF',
+        '#FF702E',
+        '#FFC83D',
       ],
     },
   ],
 };
 
 const BarChart = () => {
-  return <Bar options={options} data={data} />;
+  return (
+    <div className={styles.container}>
+      <Bar options={options} data={data} />
+    </div>
+  )
 }
 
 export default BarChart;

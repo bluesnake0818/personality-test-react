@@ -21,6 +21,14 @@
   border-style: solid;
 }
 
+.list {
+  list-style: none;
+}
+
+.desc {
+  font-size: 1.4rem;
+}
+
 .title {
   text-align: center;
   margin-top: 8rem;
