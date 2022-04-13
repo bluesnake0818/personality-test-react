@@ -10,12 +10,13 @@ import Profile from './pages/Profile/Profile'
 import PersonalityTest from './pages/PersonalityTest/PersonalityTest'
 import Result from './pages/Result/Result'
 import EditTest from './pages/EditTest/EditTest'
+import MasterForm from './pages/MasterForm/MasterForm'
 import * as authService from './services/authService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
-  console.log(user)
+  // console.log(user)
 
   const handleLogout = () => {
     authService.logout()
@@ -63,6 +64,10 @@ const App = () => {
         <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/master-form"
+          element={<MasterForm />}
         />
       </Routes>
     </>

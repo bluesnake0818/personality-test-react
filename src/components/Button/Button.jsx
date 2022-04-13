@@ -16,6 +16,8 @@ const Button = (props) => {
 
   styleObj.color = props.color
   styleObj.borderColor = props.color
+  styleObj.width = props.width
+  styleObj.margin = props.margin
 
   return (
     <button style={styleObj}>
