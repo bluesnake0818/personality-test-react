@@ -1,0 +1,23 @@
+.button {
+  /* width: 100%; */
+  border-width: 2px;
+}
+
+/* .footerInLine {
+  display: none;
+}
+
+.footer > p {
+  width: 100%;
+  text-align: center;
+} */
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+}

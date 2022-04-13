@@ -6,7 +6,7 @@ const Profile = (props) => {
   return (
     <main className={styles.container}>    
       <h1 className={styles.title}>Welcome, Will!</h1>
-      <Link to='/personality-test'>
+      <Link to='/personality-test' className={styles.link}>
         <button className={styles.button}>Add Test</button>
       </Link>    
       <TestResultCard />

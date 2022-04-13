@@ -9,6 +9,7 @@ import Profiles from './pages/Profiles/Profiles'
 import Profile from './pages/Profile/Profile'
 import PersonalityTest from './pages/PersonalityTest/PersonalityTest'
 import Result from './pages/Result/Result'
+import EditTest from './pages/EditTest/EditTest'
 import * as authService from './services/authService'
 
 const App = () => {
@@ -54,6 +55,10 @@ const App = () => {
         <Route
           path="/profile"
           element={<Profile />}
+        />
+        <Route
+          path="/edit-test"
+          element={<EditTest />}
         />
         <Route
           path="/profiles"

@@ -6,6 +6,26 @@
   margin-top: 8rem;
 }
 
+.title {
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 7rem;
+  font-size: 2rem;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
+  height: 8rem;
+  width: 50%;
+  margin: 0;
+}
 
 /* 
 .list {

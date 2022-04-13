@@ -21,6 +21,13 @@
   border-style: solid;
 }
 
+.title {
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 7rem;
+  font-size: 2rem;
+}
+
 .myTypeCard {
   /* margin-top: 8rem; */
   min-height: 60rem;
@@ -111,12 +118,6 @@
   height: 20rem;
 }
 
-.title {
-  text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 7rem;
-  font-size: 2rem;
-}
 
 .category {
   color: #FF6969;
