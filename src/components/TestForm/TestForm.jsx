@@ -18,11 +18,11 @@ const TestForm = () => {
 
   return (
     <section className={styles.card}>
-      <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
-      <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} />
-      {TestFormData.map((slide, index) => {
-        return (
-          <form className={styles.form} autoComplete="off">
+      <form className={styles.form} autoComplete="off">
+        <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
+        <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} />
+        {TestFormData.map((slide, index) => {
+          return (
             <div className={index === current ? 'slide active' : 'slide'} key={index}>
               {
                 index === current && 
@@ -34,19 +34,19 @@ const TestForm = () => {
                     </div>
                     <div className={styles.listArea}>
                       <ul className={styles.list}>
-                        <li><button className={styles.btn}>{slide.choice_1}</button></li>
-                        <li><button className={styles.btn}>{slide.choice_2}</button></li>
-                        <li><button className={styles.btn}>{slide.choice_3}</button></li>
-                        <li><button className={styles.btn}>{slide.choice_4}</button></li>
+                        <li className={styles.listItem}><input className={styles.radioInput} type="radio" value='1' name="question_1"/><p className={styles.choiceDesc}>{slide.choice_1}</p></li>
+                        <li className={styles.listItem}><input className={styles.radioInput} type="radio" value='2' name="question_1"/><p className={styles.choiceDesc}>{slide.choice_2}</p></li>
+                        <li className={styles.listItem}><input className={styles.radioInput} type="radio" value='3' name="question_1"/><p className={styles.choiceDesc}>{slide.choice_3}</p></li>
+                        <li className={styles.listItem}><input className={styles.radioInput} type="radio" value='4' name="question_1"/><p className={styles.choiceDesc}>{slide.choice_4}</p></li>
                       </ul>
                     </div>
                   </>
                 )
               }
             </div>
-          </form>
-        ) 
-      })}  
+          ) 
+        })}  
+      </form>
     </section>
   )
 }
