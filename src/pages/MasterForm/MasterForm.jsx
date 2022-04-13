@@ -8,15 +8,16 @@ import Step6 from "./components/Step6"
 import ProgressBar from '@ramonak/react-progress-bar'
 import styles from './MasterForm.module.css'
 
+
 class MasterForm extends react.Component {
   constructor(props) {
     super(props)
     this.state = {
       currentStep: 1,
-      ans_1:  '',
+      ans_1: '',
       ans_2: '',
       ans_3: '', 
-      ans_4:  '',
+      ans_4: '',
       ans_5: '',
       ans_6: '', 
     }
@@ -64,10 +65,8 @@ previousButton() {
   let currentStep = this.state.currentStep;
   if(currentStep !==1){
     return (
-      <button 
-        className="btn btn-secondary" 
-        type="button" onClick={this._prev}>
-      Previous
+      <button className={styles.prevButton} type="button" onClick={this._prev}>
+        Prev
       </button>
     )
   }
@@ -101,10 +100,13 @@ nextButton(){
         labelSize="8px"
         maxCompleted={6}
       />
-      <h1>React Wizard Form 🧙‍♂️</h1>
-      <p>Step {this.state.currentStep} </p> 
+      {/* <h1>React Wizard Form 🧙‍♂️</h1> */}
+      <div className={styles.header}>
+        {this.previousButton()}
+        <p className={styles.currentStep}>Step {this.state.currentStep}</p> 
+      </div>
 
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className={styles.form}>
       {/* 
         render the form steps and pass required props in
       */}
@@ -138,7 +140,7 @@ nextButton(){
           handleChange={this.handleChange}
           password={this.state.password}
         />
-        {this.previousButton()}
+        
         {this.nextButton()}
 
       </form>
