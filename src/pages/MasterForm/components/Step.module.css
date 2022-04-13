@@ -5,7 +5,7 @@
   padding: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #ffffff;
   border-radius: 20px;
@@ -16,6 +16,7 @@
 
 .questionArea {
   width: 30rem;
+  
 }
 
 .questionNo {
@@ -28,8 +29,9 @@
   font-size: 1.8rem;
 }
 
+
 .listArea {
-  width: 100%;
+  width: 30rem;
   display: flex;
   justify-content: center;
 }
@@ -83,7 +85,7 @@
   transition-duration: 1s ease;
 }
 
-.slide.active {
+/* .slide.active {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
@@ -91,9 +93,34 @@
   flex-direction: column;
   justify-content: space-around;
   min-height: 40rem;
-}
+} */
 
-h1{
+/* h1{
   text-align: left;
   font-size: 3.2rem;
+} */
+
+.submitButton {
+  position: absolute;
+  width: 10rem;
+  top: 50%;
+  right: 10%;
+  font-size: 2rem;
+  color: #000000;
+  /* color: #6661F1; */
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 20px;
+  background-color: rgba(255,255,255, 0.5);
+  border-style: none;
+  font-size: 1rem;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  /* .card {
+    padding: 3%;
+  } */
 }

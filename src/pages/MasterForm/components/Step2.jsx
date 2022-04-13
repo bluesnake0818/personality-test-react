@@ -3,12 +3,12 @@ import styles from './Step.module.css'
 
 
 function Step2(props) {
-  if (props.currentStep !== 2) {
+  if (props.currentStep !== 1) {
     return null
   } 
 
-  const slide = TestFormData[props.currentStep-1]
-  const currQuestion = `ans_${props.currentStep-1}`
+  const slide = TestFormData[props.currentStep]
+  const currQuestion = `ans_${props.currentStep+1}`
 
   return(
     <div className={styles.card}>

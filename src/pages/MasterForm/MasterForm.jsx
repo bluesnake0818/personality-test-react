@@ -8,21 +8,27 @@ import Step6 from "./components/Step6"
 import ProgressBar from '@ramonak/react-progress-bar'
 import styles from './MasterForm.module.css'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
-
+import { useState, useRef, useEffect } from "react"
 
 class MasterForm extends react.Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentStep: 1,
+      currentStep: 0,
       ans_1: '',
       ans_2: '',
       ans_3: '', 
       ans_4: '',
       ans_5: '',
-      ans_6: '', 
+      birthYear: '', 
     }
   }
+
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   birthYear: null,
+	// 	zodiac: '',
+  // })
 
   handleChange = event => {
     const {name, value} = event.target
@@ -30,22 +36,26 @@ class MasterForm extends react.Component {
       [name]: value
     })    
   }
-   
+
   handleSubmit = event => {
     event.preventDefault()
-    const { ans_1, ans_2, ans_3, ans_4, ans_5, ans_6 } = this.state
-    alert(`Your test details: \n 
-           Answer 1: ${ans_1} \n 
-           Answer 2: ${ans_2} \n 
-           Answer 3: ${ans_3} \n 
-           Answer 4: ${ans_4} \n 
-           Answer 5: ${ans_5} \n 
-           Answer 6: ${ans_6}`)
+    console.log(this.state)
+    const { ans_1, ans_2, ans_3, ans_4, ans_5, birthYear } = this.state
+    const testData = this.state
+    console.log(testData)
+
+    // alert(`Your test details: \n 
+    //       Answer 0: ${ans_0} \n 
+    //       Answer 1: ${ans_1} \n 
+    //       Answer 2: ${ans_2} \n 
+    //       Answer 3: ${ans_3} \n 
+    //       Answer 4: ${ans_4} \n 
+    //       Birth Year: ${birthYear}`)
   }
   
   _next = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep >= 5? 6: currentStep + 1
+    currentStep = currentStep >= 4? 5: currentStep + 1
     this.setState({
       currentStep: currentStep
     })
@@ -53,7 +63,7 @@ class MasterForm extends react.Component {
     
   _prev = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep <= 1? 1: currentStep - 1
+    currentStep = currentStep <= 0? 0: currentStep - 1
     this.setState({
       currentStep: currentStep
     })
@@ -64,10 +74,11 @@ class MasterForm extends react.Component {
 */
 previousButton() {
   let currentStep = this.state.currentStep;
-  if(currentStep !==1){
+  let prevText = '< Prev'
+  if(currentStep !==0){
     return (
       <button className={styles.prevButton} type="button" onClick={this._prev}>
-        Prev
+        {prevText}
       </button>
     )
   }
@@ -76,7 +87,7 @@ previousButton() {
 
 nextButton(){
   let currentStep = this.state.currentStep;
-  if(currentStep <6){
+  if(currentStep <5){
     return (
       // <button 
       //   className="btn btn-primary float-right" 
@@ -90,6 +101,7 @@ nextButton(){
 }
   
   render() {    
+    let currStepIndicator = this.state.currentStep + 1;
     return (
       <react.Fragment>
       <ProgressBar 
@@ -100,12 +112,12 @@ nextButton(){
         baseBgColor="#c4c4c4"
         labelColor="#6661F1"
         labelSize="8px"
-        maxCompleted={6}
+        maxCompleted={5}
       />
       {/* <h1>React Wizard Form 🧙‍♂️</h1> */}
       <div className={styles.header}>
         {this.previousButton()}
-        <p className={styles.currentStep}>Step {this.state.currentStep}</p> 
+        <p className={styles.currentStep}>Step {currStepIndicator}</p> 
       </div>
 
       <form onSubmit={this.handleSubmit} className={styles.form}>
@@ -115,32 +127,32 @@ nextButton(){
         <Step1 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          email={this.state.email}
+          // ans_0={this.state.ans_0}
         />
         <Step2 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          username={this.state.username}
+          // ans_1={this.state.ans_1}
         />
         <Step3 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          password={this.state.password}
+          // ans_2={this.state.ans_2}
         />
         <Step4
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          email={this.state.email}
+          // ans_3={this.state.ans_3}
         />
         <Step5 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          username={this.state.username}
+          // ans_4={this.state.ans_4}
         />
         <Step6 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          password={this.state.password}
+          birthYear={this.state.birthYear}
         />
         
         {this.nextButton()}
@@ -151,7 +163,4 @@ nextButton(){
   }
 }
 
-
-
 export default MasterForm
-// ReactDOM.render(<MasterForm />, document.getElementById('root'))

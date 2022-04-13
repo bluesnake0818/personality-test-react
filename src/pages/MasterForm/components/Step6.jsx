@@ -4,12 +4,13 @@ import styles from './Step.module.css'
 import Button from '../../../components/Button/Button';
 
 function Step6(props) {
-  if (props.currentStep !== 6) {
+  if (props.currentStep !== 5) {
     return null
   } 
 
-  const slide = TestFormData[props.currentStep-1]
-  const currQuestion = `ans_${props.currentStep-1}`
+  const slide = TestFormData[props.currentStep]
+  const submitText = 'Submit >'
+  // const currQuestion = `ans_${props.currentStep-1}`
 
   return(
     <react.Fragment>
@@ -21,25 +22,13 @@ function Step6(props) {
       <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='1' onChange={props.handleChange}/>
+            <input className={styles.radioInput} type="text" name="birthYear" value={props.birthYear} onChange={props.handleChange}/>
             <p className={styles.choiceDesc}>{slide.choice_1}</p>
-          </li>
-          <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='2' onChange={props.handleChange}/>
-            <p className={styles.choiceDesc}>{slide.choice_2}</p>
-          </li>
-          <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='3' onChange={props.handleChange}/>
-            <p className={styles.choiceDesc}>{slide.choice_3}</p>
-          </li>
-          <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='4' onChange={props.handleChange}/>
-            <p className={styles.choiceDesc}>{slide.choice_4}</p>
           </li>
         </ul>
       </div>
     </div>
-    <button className="btn btn-success btn-block">Submit</button>
+    <button className={styles.submitButton}>{submitText}</button>
     </react.Fragment>
   );
 }

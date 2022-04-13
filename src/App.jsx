@@ -12,8 +12,10 @@ import Result from './pages/Result/Result'
 import EditTest from './pages/EditTest/EditTest'
 import MasterForm from './pages/MasterForm/MasterForm'
 import * as authService from './services/authService'
+import * as personalityService from './services/personalityService'
 
 const App = () => {
+  const [personalities, setPersonalities] = useState([])
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   // console.log(user)
@@ -22,6 +24,17 @@ const App = () => {
     authService.logout()
     setUser(null)
     navigate('/')
+  }
+
+  // const handleAddPersonality = async newPersonalityData => {
+  //   const newPersonality = await personalityService.create(newPersonalityData)
+  //   setPersonalities([...personalities, newPersonality])
+  //   navigate('/master-form')
+  // }
+
+  const addPersonality = async (personalityData) => {
+    const personality = await personalityService.create(personalityData)
+    setPersonalities([...personalities, personality])
   }
 
   const handleSignupOrLogin = () => {
