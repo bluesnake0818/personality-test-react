@@ -12,12 +12,14 @@ function TestResultCard({ personality }) {
         <h3 className={styles.name}>{personality.birthYear}</h3>  
         <div className={styles.imgBtnArea}>
           <img src='/dog_3d.png' alt="" className={styles.image}/>
-          <button className={styles.editButton}>Edit</button>
+          <Link to={`/personalities/${personality.id}/edit`} className={styles.link}>
+            <button className={styles.editButton}>Edit</button> 
+          </Link>
           <button className={styles.deleteButton}>Delete</button>
         </div>
         <div className={styles.listArea}>
           <ul className={styles.list}>
-            <li ><p className={styles.comment}>Zodiac: </p></li>
+            <li><p className={styles.comment}>Zodiac: </p></li>
             <li><p className={styles.createdAt}>Created At: {personality.created_at}</p></li>
             <li><p className={styles.comment}>Comment: {personality.comment}</p></li>
             <li><p className={styles.updatedAt}>Updated At:</p></li>
