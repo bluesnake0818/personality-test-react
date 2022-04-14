@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom'
 import styles from './TestResultCard.module.css'
+import { ZodiacMatchData } from '../../pages/Result/ZodiacMatchData'
 
-function TestResultCard() {
+function TestResultCard({ personality }) {
   // const friendZod = friend.zodiac
   // const friendZodImg = `/designs_${friendZod}.png`
 
   return (
     <>
-      <div className={styles.card}>
-        <h3 className={styles.name}>The ever-cautious dog</h3>  
+      <Link to={`/personalities/${personality.id}`} className={styles.card}>
+        <h3 className={styles.name}>{personality.birthYear}</h3>  
         <div className={styles.imgBtnArea}>
           <img src='/dog_3d.png' alt="" className={styles.image}/>
           <button className={styles.editButton}>Edit</button>
@@ -16,12 +17,13 @@ function TestResultCard() {
         </div>
         <div className={styles.listArea}>
           <ul className={styles.list}>
-            <li ><p className={styles.comment}>Comment:</p></li>
-            <li><p className={styles.createdAt}>Created At:</p></li>
+            <li ><p className={styles.comment}>Zodiac: </p></li>
+            <li><p className={styles.createdAt}>Created At: {personality.created_at}</p></li>
+            <li><p className={styles.comment}>Comment: {personality.comment}</p></li>
             <li><p className={styles.updatedAt}>Updated At:</p></li>
           </ul>
         </div>
-      </div>
+      </Link>
       
     </>
     // <Link className={styles.linkToShowCompat} state={{friend}} to="/showCompat">

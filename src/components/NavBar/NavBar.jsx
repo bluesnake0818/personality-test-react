@@ -18,7 +18,7 @@ const NavBar = ({ user, handleLogout }) => {
                 </Link>
               </li>
               <li className={styles.listItem}>
-                <Link to="/profile" className={styles.link} >
+                <Link to="/personalities" className={styles.link} >
                   <p className={styles.paragraph}>{user.name}'s Profile</p>
                 </Link>
               </li>

@@ -98,10 +98,10 @@ function Step6(props) {
     <div className={styles.card}>
       <div className={styles.questionArea}>
         <h1 className={styles.questionNo}>{slide.number}</h1>
-        <h3 className={styles.question}>{slide.question}</h3>
+        <h3 className={styles.question}>{slide.prompt_1}</h3>
       </div>
       <input 
-        className={styles.input}
+        className={styles.bYearInput}
         type="number" 
         value={props.formData.birthYear}
         onChange={(event) => props.setFormData({...props.formData, birthYear: event.target.value })} />
@@ -113,11 +113,14 @@ function Step6(props) {
         type="text" 
         value={props.formData.zodiac}
         onChange={(event) => props.setFormData({...props.formData, zodiac: event.target.value })} /> */}
+      <div className={styles.commentArea}>
+        <h3 className={styles.question}>{slide.prompt_2}</h3>
       <input 
-        className={styles.input}
+        className={styles.commentInput}
         type="text" 
         value={props.formData.comment}
         onChange={(event) => props.setFormData({...props.formData, comment: event.target.value })} />
+      </div>
       {/* <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>

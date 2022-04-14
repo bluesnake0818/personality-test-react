@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
@@ -9,7 +9,7 @@ import Profiles from './pages/Profiles/Profiles'
 import Profile from './pages/Profile/Profile'
 import PersonalityTest from './pages/PersonalityTest/PersonalityTest'
 import Result from './pages/Result/Result'
-import EditTest from './pages/EditTest/EditTest'
+import EditPersonality from './pages/EditPersonality/EditPersonality'
 import * as authService from './services/authService'
 import * as personalityService from './services/personalityService'
 
@@ -18,6 +18,14 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   // console.log(user)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await personalityService.getAll()
+      setPersonalities(data)
+    }
+    fetchData()
+  }, [])
 
   const handleLogout = () => {
     authService.logout()
@@ -31,6 +39,18 @@ const App = () => {
     // navigate('/result')
   }
 
+  const updatePersonality = async (personalityData) => {
+    const updatedPersonality = await personalityService.update(personalityData)
+    setPersonalities(personalities.map((personality) => (
+      personality.id === updatedPersonality.id ? updatedPersonality : personality
+    )))
+  }
+
+  const deletePersonality = async (id) => {
+    await personalityService.deleteOne(id)
+    setPersonalities (personalities.filter(personality => personality.id !== parseInt(id)))
+  }
+
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
@@ -41,12 +61,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
-          path="/personality-test"
+          path="/personalities/new"
           element={<PersonalityTest addPersonality={addPersonality} user={user}/>}
         />
         <Route
-          path="/result"
-          element={<Result handleLogout={handleLogout} />}
+          path="/personalities/:id" element={
+            <Result handleLogout={handleLogout} user={user} />}
         />
         <Route
           path="/signup-or-login"
@@ -61,17 +81,21 @@ const App = () => {
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
         <Route
-          path="/profile"
-          element={<Profile />}
+          path="/personalities"
+          element={<Profile user={user} personalities={personalities} />}
         />
         <Route
-          path="/edit-test"
-          element={<EditTest />}
+          path="/personalities/:id/edit" element={
+            <EditPersonality personalities={personalities} updatePersonality={updatePersonality} user={user} />}
         />
         <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
+        {/* <Route
+          path="/personalities/:id/confirmation"
+          element={user ? <Profiles /> : <Navigate to="/login" />}
+        /> */}
       </Routes>
     </>
   )

@@ -1,11 +1,28 @@
 import { ZodiacData } from './ZodiacData';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Result.module.css'
 import BarChart from '../../components/BarChart/BarChart';
 
+// Services
+import { getOne } from '../../services/personalityService'
 
-const Result = (props) => {
+const Result = ({ handleLogout, user }) => {
+  const { id } = useParams ()
+  const [personality, setPersonality] = useState({})
+  
+  useEffect(() => {
+    const fetchOne = async () => {
+      console.log("getOne")
+      const data = await getOne(id)
+      console.log(data)
+      setPersonality(data.personality)
+    }
+    fetchOne()
+  }, [id])
+
+  // if (!personality) return <h1>Loading</h1>
   // const [zodiacs, setZodiacs] = useState(ZodiacData)
   // const [zodiacObj, setZodiacObj] = useState(
   //   {} 
@@ -25,14 +42,15 @@ const Result = (props) => {
 
   return (
     <div className={styles.container}>
-      {1===0 ?
+      {personality.birthYear}
+      {/* {1===0 ?
         <div className={styles.loading}>
           <h1 className={styles.title}>Loading...</h1>
           <img src="/monkey_3d.png" className={styles.image}/>
           <p className={styles.note}>Analyzing your personality type..</p>
           <p className={styles.note}>Buckle up!</p>
         </ div>
-        :
+        : */}
         <div className={styles.result}>
           <div className={styles.myTypeCard}>
             <h1 className={styles.title}>The Bulldozing Rabbit</h1>
@@ -115,7 +133,7 @@ const Result = (props) => {
             <p>Copyright 2022 HangFive, Inc. All rights reserved.</p>
           </div>
         </div>
-      }
+      {/* } */}
     </div>
   )
 }

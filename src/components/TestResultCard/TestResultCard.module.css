@@ -31,11 +31,16 @@
   margin: 1rem;
 }
 
-.title {
+/* .title {
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 7rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: #6661F1;
+} */
+
+.subTitle {
+
 }
 
 .imgBtnArea {

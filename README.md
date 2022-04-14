@@ -1,6 +1,12 @@
-# hangfive Zodiac + Personality Test
+# hangfive Personality Test - zodiac signs on a date
 
 ## Getting Started
+- Link: 
+
+## Screenshots
+
+## Technologies Used:
+
 
 
 ## Credit 
@@ -9,11 +15,7 @@
 - multi-form: https://www.youtube.com/watch?v=wOxP4k9f5rk
 - quizzes: https://www.proprofs.com/quiz-school/personality/playquiz/?title=what-type-of-dating-personality-do-you-have
 
-## Original Wireframes 
-
-## ERD
-
-## Ice box
+## Next Steps
 - different avatars for different personality types
 - different types of tests
 - create ability for guest and associate the tests to profile

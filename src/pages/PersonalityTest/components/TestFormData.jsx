@@ -38,6 +38,11 @@ export const TestFormData = [
     choice_2: 'B. You let him/her know when you are available and say you will call.',
     choice_3: 'C. You find out when it will suit both of you again and ask to see him/her again.',
   },
+  { 
+    number: 'Q.06',
+    prompt_1: 'What is your birth year?',
+    prompt_2: 'Leave comment',
+  },   
 
 
 

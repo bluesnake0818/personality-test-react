@@ -15,11 +15,11 @@ function Step4(props) {
         <h1 className={styles.questionNo}>{slide.number}</h1>
         <h3 className={styles.question}>{slide.question}</h3>
       </div>
-      <input 
+      {/* <input 
         className={styles.input}
         type="text" 
         value={props.formData.ans_4}
-        onChange={(event) => props.setFormData({...props.formData, ans_4: event.target.value })} />
+        onChange={(event) => props.setFormData({...props.formData, ans_4: event.target.value })} /> */}
       <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>
@@ -45,9 +45,9 @@ function Step4(props) {
         <input 
           className={styles.input}
           type="text" 
-          placeholder="A"
-          value={props.formData.ans_1}
-          onChange={(event) => props.setFormData({...props.formData, ans_1: event.target.value })} 
+          // placeholder="A"
+          value={props.formData.ans_4}
+          onChange={(event) => props.setFormData({...props.formData, ans_4: event.target.value })} 
         />
       </div>
     </div>

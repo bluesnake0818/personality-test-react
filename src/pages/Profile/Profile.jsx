@@ -9,7 +9,13 @@ const Profile = (props) => {
       <Link to='/personality-test' className={styles.link}>
         <button className={styles.button}>Add Test</button>
       </Link>    
-      <TestResultCard />
+      {props.personalities.map((personality) => (
+        <TestResultCard 
+          personality={personality} 
+          key={personality.id}
+        />
+      ))}
+      
       {/* <ul className={styles.list}>
         {props.friends.map((friend, index) => 
           (friend.owner._id === props.user.profile) &&
