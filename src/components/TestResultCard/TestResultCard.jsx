@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './TestResultCard.module.css'
-import { ZodiacMatchData } from '../../pages/Result/ZodiacMatchData'
+import { ZodiacMatchData } from '../../pages/Result/Archived/ZodiacMatchData'
 
 function TestResultCard({ personality, deletePersonality }) {
   // const friendZod = friend.zodiac

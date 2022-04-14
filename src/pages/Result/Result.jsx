@@ -39,10 +39,10 @@ const Result = ({ handleLogout, user }) => {
   // const nemesis = zodiacObj.nemesis
   // const yourBffImg = `/designs_${bff}.png`
   // const yourNemesisImg = `/designs_${nemesis}.png`
-
+  const imgURL = `/${personality.zodiac.toLowerCase()}_3d.png`
   return (
     <div className={styles.container}>
-      {personality.birthYear}
+      
       {/* {1===0 ?
         <div className={styles.loading}>
           <h1 className={styles.title}>Loading...</h1>
@@ -53,8 +53,8 @@ const Result = ({ handleLogout, user }) => {
         : */}
         <div className={styles.result}>
           <div className={styles.myTypeCard}>
-            <h1 className={styles.title}>The Bulldozing Rabbit</h1>
-            <img src='/rabbit_3d.png' alt="" className={styles.image}/>
+            <h1 className={styles.title}>{personality.name} {personality.zodiac}</h1>
+            <img src={imgURL} alt="" className={styles.image}/>
             <BarChart />
             <ul className={styles.list}>
               <li>
