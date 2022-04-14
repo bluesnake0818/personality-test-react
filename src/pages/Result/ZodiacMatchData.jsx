@@ -1,7 +1,7 @@
-export const ZodiacMatchData = {
-  1980: 'Monkey',
-}
+// export const ZodiacMatchData = {
+//   1980: 'Monkey',
 // }
+// // }
 //   {1981: 'Rooster'},
 //   {1982: 'Dog'},
 //   {1983: 'Pig'},
