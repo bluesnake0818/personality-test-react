@@ -9,11 +9,10 @@ function Step6(props) {
   } 
 
   const slide = TestFormData[props.currentStep]
-  const submitText = 'Submit >'
+  
   // const currQuestion = `ans_${props.currentStep-1}`
 
   return(
-    <react.Fragment>
     <div className={styles.card}>
       <div className={styles.questionArea}>
         <h1 className={styles.questionNo}>{slide.number}</h1>
@@ -28,9 +27,7 @@ function Step6(props) {
         </ul>
       </div>
     </div>
-    <button className={styles.submitButton}>{submitText}</button>
-    </react.Fragment>
-  );
+  )
 }
 
 export default Step6

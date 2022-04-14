@@ -42,7 +42,7 @@ const App = () => {
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/personality-test"
-          element={<PersonalityTest addPersonality={addPersonality}/>}
+          element={<PersonalityTest addPersonality={addPersonality} user={user}/>}
         />
         <Route
           path="/result"

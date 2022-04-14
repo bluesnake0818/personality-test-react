@@ -3,6 +3,7 @@ const BASE_URL = `${process.env.REACT_APP_API_URL}/api/personalities/`
 
 
 export const create = async (personality) => {
+  console.log("THIS IS CREATE FUNCTION")
   try {
     const res = await fetch(BASE_URL, {
       method: "POST",

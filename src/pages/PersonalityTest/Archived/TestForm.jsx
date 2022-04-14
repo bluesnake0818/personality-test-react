@@ -1,6 +1,6 @@
 import styles from './TestForm.module.css'
 import React, { useState, useRef, useEffect } from 'react'
-import { TestFormData } from './TestFormData';
+import { TestFormData } from '../components/TestFormData';
 import Button from '../../../components/Button/Button';
 
 const TestForm = () => {

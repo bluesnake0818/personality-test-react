@@ -11,7 +11,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import { useState, useRef, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 
-class MasterForm extends react.Component {
+class PersonalityTest extends react.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -42,23 +42,23 @@ class MasterForm extends react.Component {
     })    
   }
 
-  handleSubmit = ({ event, props}) => {
+  handleSubmit = (event) => {
     event.preventDefault()
     // const navigate = useNavigate()
     console.log(this.state)
-    // const { ans_1, ans_2, ans_3, ans_4, ans_5, birthYear } = this.state
-    props.addPersonality(this.state)
+    const { ans_1, ans_2, ans_3, ans_4, ans_5, birthYear } = this.state
+    // props.addPersonality(this.state)
     // navigate(`/result`)
     // const testData = this.state
     // console.log(testData)
 
-    // alert(`Your test details: \n 
-    //       Answer 0: ${ans_0} \n 
-    //       Answer 1: ${ans_1} \n 
-    //       Answer 2: ${ans_2} \n 
-    //       Answer 3: ${ans_3} \n 
-    //       Answer 4: ${ans_4} \n 
-    //       Birth Year: ${birthYear}`)
+    alert(`Your test details: \n 
+          Answer 1: ${ans_1} \n 
+          Answer 2: ${ans_2} \n 
+          Answer 3: ${ans_3} \n 
+          Answer 4: ${ans_4} \n 
+          Answer 5: ${ans_5} \n 
+          Birth Year: ${birthYear}`)
   }
   
   _next = () => {
@@ -110,6 +110,7 @@ nextButton(){
   
   render() {    
     let currStepIndicator = this.state.currentStep + 1;
+    const submitText = 'Submit >'
     return (
       <react.Fragment>
       <ProgressBar 
@@ -135,34 +136,35 @@ nextButton(){
         <Step1 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          // ans_0={this.state.ans_0}
+          ans_1={this.state.ans_1}
         />
         <Step2 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          // ans_1={this.state.ans_1}
+          ans_2={this.state.ans_2}
         />
         <Step3 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          // ans_2={this.state.ans_2}
+          ans_3={this.state.ans_3}
         />
         <Step4
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          // ans_3={this.state.ans_3}
+          ans_4={this.state.ans_4}
         />
         <Step5 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          // ans_4={this.state.ans_4}
+          ans_5={this.state.ans_5}
         />
         <Step6 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           birthYear={this.state.birthYear}
         />
-        
+
+        <button type="submit" className={styles.submitButton}>{submitText}</button>
         {this.nextButton()}
 
       </form>
@@ -171,4 +173,4 @@ nextButton(){
   }
 }
 
-export default MasterForm
+export default PersonalityTest

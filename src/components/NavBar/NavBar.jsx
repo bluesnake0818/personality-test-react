@@ -22,11 +22,6 @@ const NavBar = ({ user, handleLogout }) => {
                   <p className={styles.paragraph}>{user.name}'s Profile</p>
                 </Link>
               </li>
-              <li className={styles.listItem}>
-                <Link to="/compat" className={styles.link} >
-                  <p className={styles.paragraph}>Compatibility</p>
-                </Link>
-              </li>
             </ul>
           </nav>
         :
