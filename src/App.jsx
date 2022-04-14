@@ -10,6 +10,7 @@ import Profile from './pages/Profile/Profile'
 import PersonalityTest from './pages/PersonalityTest/PersonalityTest'
 import Result from './pages/Result/Result'
 import EditPersonality from './pages/EditPersonality/EditPersonality'
+import Confirmation from './pages/Confirmation/Confirmation'
 import * as authService from './services/authService'
 import * as personalityService from './services/personalityService'
 
@@ -82,15 +83,18 @@ const App = () => {
         />
         <Route
           path="/personalities"
-          element={<Profile user={user} personalities={personalities} />}
+          element={<Profile user={user} personalities={personalities} deletePersonality={deletePersonality} />}
         />
         <Route
           path="/personalities/:id/edit" element={
             <EditPersonality personalities={personalities} updatePersonality={updatePersonality} user={user} />}
         />
-        <Route
+        {/* <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
+        /> */}
+        <Route path="/personalities/:id/confirmation" element={
+            <Confirmation deletePersonality={deletePersonality} user={user} />} 
         />
         {/* <Route
           path="/personalities/:id/confirmation"

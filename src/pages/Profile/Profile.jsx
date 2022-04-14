@@ -2,16 +2,17 @@ import styles from './Profile.module.css'
 import { Link } from 'react-router-dom';
 import TestResultCard from '../../components/TestResultCard/TestResultCard';
 
-const Profile = (props) => {
+const Profile = ({ user, personalities, deletePersonality } ) => {
   return (
     <main className={styles.container}>    
       <h1 className={styles.title}>Welcome, Will!</h1>
       <Link to='/personality-test' className={styles.link}>
         <button className={styles.button}>Add Test</button>
       </Link>    
-      {props.personalities.map((personality) => (
+      {personalities.map((personality) => (
         <TestResultCard 
           personality={personality} 
+          deletePersonality={deletePersonality}
           key={personality.id}
         />
       ))}

@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './TestResultCard.module.css'
 import { ZodiacMatchData } from '../../pages/Result/ZodiacMatchData'
 
-function TestResultCard({ personality }) {
+function TestResultCard({ personality, deletePersonality }) {
   // const friendZod = friend.zodiac
   // const friendZodImg = `/designs_${friendZod}.png`
+  const navigate = useNavigate()
 
   return (
     <>
@@ -15,7 +16,21 @@ function TestResultCard({ personality }) {
           <Link to={`/personalities/${personality.id}/edit`} className={styles.link}>
             <button className={styles.editButton}>Edit</button> 
           </Link>
-          <button className={styles.deleteButton}>Delete</button>
+          {/* <Link to={`/personalities/${personality.id}/confirmation`} className={styles.link} personality={personality}>
+            <button className={styles.deleteButton}>Delete</button> 
+          </Link> */}
+          <Link
+            className={styles.linkForButton}
+            to=''
+            >
+            <button
+              className={styles.deleteButton}
+              onClick={()=> deletePersonality(personality.id)}
+            >
+              Delete
+            </button>
+          </Link>
+          {/* <button className={styles.deleteButton} onClick={() => navigate(`/personalities/${personality.id}/confirmation`, { state: personality })}>Delete</button> */}
         </div>
         <div className={styles.listArea}>
           <ul className={styles.list}>
