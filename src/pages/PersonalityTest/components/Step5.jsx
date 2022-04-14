@@ -9,6 +9,42 @@ function Step5(props) {
   const slide = TestFormData[props.page]
   const currQuestion = `ans_${props.page+1}`
 
+  const handleChange = event => {
+    const sum = parseInt(props.formData.ans_1) + parseInt(props.formData.ans_2) + parseInt(props.formData.ans_3) + parseInt(props.formData.ans_4) + parseInt(event.target.value)
+    if (sum < 7) {
+      props.setFormData({...props.formData, 
+        ans_5: event.target.value, 
+        name: 'The Avoider'
+      })
+    } else if (sum < 9) {
+      props.setFormData({...props.formData, 
+        ans_5: event.target.value,
+        name: 'The Dreamer'
+      })
+    } else if (sum < 12) {
+      props.setFormData({...props.formData, 
+        ans_5: event.target.value, 
+        name: 'The Martyr'
+      })
+    } else if (sum < 14) {
+      props.setFormData({...props.formData, 
+        ans_5: event.target.value, 
+        name: 'The Nurturer'
+      })
+    } else {
+      props.setFormData({...props.formData, 
+        ans_5: event.target.value, 
+        name: 'The Charmer'
+      })
+    }
+
+
+    // console.log('step 5 handlechange ' + props.formData.ans_1)
+    // props.setFormData({...props.formData, 
+    //   name: 'The Martyr',
+    //   ans_5: event.target.value })
+  }
+
   return(
     <div className={styles.card}>
       <div className={styles.questionArea}>
@@ -41,14 +77,14 @@ function Step5(props) {
         </ul>
       </div>
       <div className={styles.inputArea}>
-        <p className={styles.inputInstruction}>Type A, B, or C</p>
+        <p className={styles.inputInstruction}>Type 1, 2, or 3</p>
         <input 
           className={styles.input}
           type="text" 
           name="ans_5"
           // placeholder="A"
           value={props.formData.ans_5}
-          onChange={(event) => props.setFormData({...props.formData, ans_5: event.target.value })} 
+          onChange={handleChange} 
         />
       </div>
     </div>

@@ -41,7 +41,7 @@ function Step4(props) {
         </ul>
       </div>
       <div className={styles.inputArea}>
-        <p className={styles.inputInstruction}>Type A, B, or C</p>
+        <p className={styles.inputInstruction}>Type 1, 2, or 3</p>
         <input 
           className={styles.input}
           type="text" 

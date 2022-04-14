@@ -125,16 +125,16 @@ function Step6(props) {
 					onChange={handleChange} 
 				/>
 			</div>
-			<div className={styles.TypeArea}>
+			{/* <div className={styles.typeArea}>
 				<h3 className={styles.question}>{slide.prompt_4}</h3>
 				<input 
-					className={styles.TypeInput}
+					className={styles.typeInput}
 					type="text" 
 					name="name"
 					value={props.formData.name}
 					onChange={(event) => props.setFormData({...props.formData, name: event.target.value })} 
 				/>
-			</div>
+			</div> */}
       {/* <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>

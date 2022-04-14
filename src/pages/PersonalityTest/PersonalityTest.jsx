@@ -31,7 +31,7 @@ function PersonalityTest(props) {
 
   const PageDisplay = () => {
     if (page === 0) {
-    return <Step1 page={page} formData={formData} setFormData={setFormData} />
+      return <Step1 page={page} formData={formData} setFormData={setFormData} />
     } else if (page === 1) {
       return <Step2 page={page} formData={formData} setFormData={setFormData}/>
     } else if (page === 2) {
@@ -72,8 +72,12 @@ function PersonalityTest(props) {
                 alert("Form Submitted")
                 console.log(formData)
                 e.preventDefault()
+                
+
+              
+              
                 props.addPersonality(formData)
-                navigate(`/result`)
+                navigate(`/personalities`)
               } else {
               setPage((currPage) => currPage +1)
               }

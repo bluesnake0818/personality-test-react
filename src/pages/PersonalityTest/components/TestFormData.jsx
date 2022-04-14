@@ -2,41 +2,41 @@ export const TestFormData = [
   { 
     number: 'Q.01',
     question: "If you are out with someone new and things don't work out the way you expected, how do you react?",
-    choice_1: 'A. It must have been something you said.',
-    choice_2: 'B. It must just not have meant to be.',
-    choice_3: 'C. He/she was obviously the problem.',
+    choice_1: '1. It must have been something you said.',
+    choice_2: '2. It must just not have meant to be.',
+    choice_3: '3. He/she was obviously the problem.',
   },
 
   { 
     number: 'Q.02',
     question: "When you are spending time with someone on a date, what are you thinking of?",
-    choice_1: 'A. Having a good time on your outing.',
-    choice_2: 'B. Seeing if he/she is good enough for you.',
-    choice_3: 'C. Making a good impression on him/her.',
+    choice_1: '1. Having a good time on your outing.',
+    choice_2: '2. Seeing if he/she is good enough for you.',
+    choice_3: '3. Making a good impression on him/her.',
   },
 
   { 
     number: 'Q.03',
     question: "Your discussions on dates involve:",
-    choice_1: 'A. What you find interesting.',
-    choice_2: 'B. What he/she finds interesting.',
-    choice_3: 'C. Common interests you both enjoy',
+    choice_1: '1. What you find interesting.',
+    choice_2: '2. What he/she finds interesting.',
+    choice_3: '3. Common interests you both enjoy',
   },
 
   { 
     number: 'Q.04',
     question: "How do you dress for a first date?",
-    choice_1: 'A. Clothes you think will impress him/her.',
-    choice_2: 'B. Whatever you feel like wearing.',
-    choice_3: 'C. Something comfortable and casual.',
+    choice_1: '1. Clothes you think will impress him/her.',
+    choice_2: '2. Whatever you feel like wearing.',
+    choice_3: '3. Something comfortable and casual.',
   },
 
   { 
     number: 'Q.05',
     question: "When organising a follow up date:",
-    choice_1: 'A. You find out when it will suit him/her and make sure to clear your schedule.',
-    choice_2: 'B. You let him/her know when you are available and say you will call.',
-    choice_3: 'C. You find out when it will suit both of you again and ask to see him/her again.',
+    choice_1: '1. You find out when it will suit him/her and make sure to clear your schedule.',
+    choice_2: '2. You let him/her know when you are available and say you will call.',
+    choice_3: '3. You find out when it will suit both of you again and ask to see him/her again.',
   },
   { 
     number: 'Q.06',
