@@ -2,12 +2,12 @@ import { TestFormData } from './TestFormData';
 import styles from './Step.module.css'
 
 function Step1(props) {
-  if (props.currentStep !== 0) {
+  if (props.page !== 0) {
     return null
   } 
 
-  const slide = TestFormData[props.currentStep]
-  const currQuestion = `ans_${props.currentStep+1}`
+  const slide = TestFormData[props.page]
+  const currQuestion = `ans_${props.page+1}`
 
   return(
     <div className={styles.card}>
@@ -18,22 +18,32 @@ function Step1(props) {
       <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='1' onChange={props.handleChange}/>
+            {/* <input className={styles.radioInput} type="radio" name={currQuestion} value='1' onChange={props.handleChange}/> */}
             <p className={styles.choiceDesc}>{slide.choice_1}</p>
           </li>
           <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='2' onChange={props.handleChange}/>
+            {/* <input className={styles.radioInput} type="radio" name={currQuestion} value='2' onChange={props.handleChange}/> */}
             <p className={styles.choiceDesc}>{slide.choice_2}</p>
           </li>
           <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='3' onChange={props.handleChange}/>
+            {/* <input className={styles.radioInput} type="radio" name={currQuestion} value='3' onChange={props.handleChange}/> */}
             <p className={styles.choiceDesc}>{slide.choice_3}</p>
           </li>
-          <li className={styles.listItem}>
+          {/* <li className={styles.listItem}>
             <input className={styles.radioInput} type="radio" name={currQuestion} value='4' onChange={props.handleChange}/>
             <p className={styles.choiceDesc}>{slide.choice_4}</p>
-          </li>
+          </li> */}
         </ul>
+      </div>
+      <div className={styles.inputArea}>
+        <p className={styles.inputInstruction}>Type A, B, or C</p>
+        <input 
+          className={styles.input}
+          type="text" 
+          placeholder="A"
+          value={props.formData.ans_1}
+          onChange={(event) => props.setFormData({...props.formData, ans_1: event.target.value })} 
+        />
       </div>
     </div>
   );

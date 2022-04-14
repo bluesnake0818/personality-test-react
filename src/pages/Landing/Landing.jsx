@@ -10,7 +10,7 @@ const Landing = ({ user }) => {
           <div className={styles.titleArea}>
             <h1 className={styles.fullTitle}>hangfive Personality Test</h1>
             <h1 className={styles.shortTitle}>Personality Test</h1>
-            <h3 className={styles.subtitle}>How do I react when I discover I have a crush?</h3>
+            <h3 className={styles.subtitle}>Zodiac signs on a date</h3>
           </div>
           <img className={styles.image} src="/rabbit_3d.png" alt="bunny"/>
           <Link to='/personality-test' className={styles.link}>

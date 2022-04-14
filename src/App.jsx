@@ -28,7 +28,7 @@ const App = () => {
   const addPersonality = async (personalityData) => {
     const personality = await personalityService.create(personalityData)
     setPersonalities([...personalities, personality])
-    navigate('/result')
+    // navigate('/result')
   }
 
   const handleSignupOrLogin = () => {

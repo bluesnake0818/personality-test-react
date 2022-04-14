@@ -7,6 +7,8 @@
   /* align-items: center; */
 }
 
+
+
 .prevButton {
   grid-column: 1/2;
   margin: 0;
@@ -50,7 +52,23 @@
   user-select: none;
 }
 
-.submitButton {
+/* .submitButton {
+  position: absolute;
+  width: 10rem;
+  top: 50%;
+  right: 10%;
+  font-size: 2rem;
+  color: #000000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 20px;
+  background-color: rgba(255,255,255, 0.5);
+  border-style: none;
+  font-size: 1rem;
+} */
+
+.nextButton {
   position: absolute;
   width: 10rem;
   top: 50%;
@@ -67,6 +85,20 @@
   font-size: 1rem;
 }
 
+
+/* PROGRESS BAR */
+.progressbar {
+  width: 100%;
+  height: 10px;
+  background-color: white;
+  /* margin-bottom: 50px; */
+}
+
+.progressbar div {
+  width: 33.3%;
+  height: 100%;
+  background-color: #6661F1;
+}
 
 @media only screen and (min-width: 768px) {
   .rightArrow {

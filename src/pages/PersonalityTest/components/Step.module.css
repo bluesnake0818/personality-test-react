@@ -1,6 +1,6 @@
 .card {
   margin-top: 8rem;
-  min-height: 60rem;
+  min-height: 56rem;
   width: 40rem;
   padding: 5%;
   display: flex;
@@ -15,7 +15,7 @@
 
 
 .questionArea {
-  width: 30rem;
+  width: 100%;
   
 }
 
@@ -31,7 +31,7 @@
 
 
 .listArea {
-  width: 30rem;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -40,12 +40,17 @@
   width: 100%;
   list-style: none;
   padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .listItem {
   min-height: 6rem;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -85,6 +90,28 @@
   transition-duration: 1s ease;
 }
 
+.inputArea {
+  margin-top: 2rem;
+  /* margin-bottom: 2rem; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.inputInstruction {
+  color: #777777;
+}
+
+.input {
+  width: 20%;
+  padding: 0.4rem;
+  border-color: #777777;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
 /* .slide.active {
   opacity: 1;
   transition-duration: 1s;

@@ -1,176 +1,93 @@
-import react from "react"
+import React, { useState } from "react"
 import Step1 from "./components/Step1"
 import Step2 from "./components/Step2"
 import Step3 from "./components/Step3"
 import Step4 from "./components/Step4"
 import Step5 from "./components/Step5"
 import Step6 from "./components/Step6"
-import ProgressBar from '@ramonak/react-progress-bar'
 import styles from './PersonalityTest.module.css'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
-import { useState, useRef, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 
-class PersonalityTest extends react.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      currentStep: 0,
-      ans_1: '',
-      ans_2: '',
-      ans_3: '', 
-      ans_4: '',
-      ans_5: '',
-      birthYear: '', 
+
+function PersonalityTest(props) {
+  const navigate = useNavigate()
+  const [page, setPage] = useState(0)
+  const [formData, setFormData] = useState({
+    name: "",
+    ans_1: "",
+    ans_2: "",
+    ans_3: "",
+    ans_4: "",
+    ans_5: "",
+    birthYear: 0,
+    comment: "",
+    zodiac: "",
+  })
+
+  const FormTitles = ["Q.01", "Q.02", "Q.03", "Q.04", "Q.05", "Q.06"]
+  const nextText = 'Next >'
+  const submitText = 'Submit >'
+
+  const PageDisplay = () => {
+    if (page === 0) {
+    return <Step1 page={page} formData={formData} setFormData={setFormData} />
+    } else if (page === 1) {
+      return <Step2 page={page} formData={formData} setFormData={setFormData}/>
+    } else if (page === 2) {
+      return <Step3 page={page} formData={formData} setFormData={setFormData}/>
+    } else if (page === 3) {
+      return <Step4 page={page} formData={formData} setFormData={setFormData}/>
+    } else if (page === 4) {
+      return <Step5 page={page} formData={formData} setFormData={setFormData}/>
+    } else {
+      return <Step6 page={page} formData={formData} setFormData={setFormData}/>
     }
-    
   }
+
 
   
 
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   birthYear: null,
-	// 	zodiac: '',
-  // })
-  
-
-  handleChange = event => {
-    const {name, value} = event.target
-    this.setState({
-      [name]: value
-    })    
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault()
-    // const navigate = useNavigate()
-    console.log(this.state)
-    const { ans_1, ans_2, ans_3, ans_4, ans_5, birthYear } = this.state
-    // props.addPersonality(this.state)
-    // navigate(`/result`)
-    // const testData = this.state
-    // console.log(testData)
-
-    alert(`Your test details: \n 
-          Answer 1: ${ans_1} \n 
-          Answer 2: ${ans_2} \n 
-          Answer 3: ${ans_3} \n 
-          Answer 4: ${ans_4} \n 
-          Answer 5: ${ans_5} \n 
-          Birth Year: ${birthYear}`)
-  }
-  
-  _next = () => {
-    let currentStep = this.state.currentStep
-    currentStep = currentStep >= 4? 5: currentStep + 1
-    this.setState({
-      currentStep: currentStep
-    })
-  }
-    
-  _prev = () => {
-    let currentStep = this.state.currentStep
-    currentStep = currentStep <= 0? 0: currentStep - 1
-    this.setState({
-      currentStep: currentStep
-    })
-  }
-
-/*
-* the functions for our button
-*/
-previousButton() {
-  let currentStep = this.state.currentStep;
-  let prevText = '< Prev'
-  if(currentStep !==0){
-    return (
-      <button className={styles.prevButton} type="button" onClick={this._prev}>
-        {prevText}
-      </button>
-    )
-  }
-  return null;
-}
-
-nextButton(){
-  let currentStep = this.state.currentStep;
-  if(currentStep <5){
-    return (
-      // <button 
-      //   className="btn btn-primary float-right" 
-      //   type="button" onClick={this._next}>
-      // Next
-      <FaArrowAltCircleRight className={styles.rightArrow} onClick={this._next} />
-      // </button>        
-    )
-  }
-  return null;
-}
-  
-  render() {    
-    let currStepIndicator = this.state.currentStep + 1;
-    const submitText = 'Submit >'
-    return (
-      <react.Fragment>
-      <ProgressBar 
-        className={styles.progress}
-        completed={this.state.currentStep}
-        bgColor="#6661F1"
-        height="10px"
-        baseBgColor="#c4c4c4"
-        labelColor="#6661F1"
-        labelSize="8px"
-        maxCompleted={5}
-      />
-      {/* <h1>React Wizard Form 🧙‍♂️</h1> */}
-      <div className={styles.header}>
-        {this.previousButton()}
-        <p className={styles.currentStep}>Step {currStepIndicator}</p> 
+  return (
+    <div className={styles.form}>
+      <div className={styles.progressbar}>
+        <div style={{width: page === 0 ? "16.7%" : page === 1 ? "33.3%" : page === 2 ? "50.0%" : page === 3 ? "66.7%" : page === 4 ? "83.3%" : "100.0%" }}
+        ></div>
       </div>
+      <div className="form-container">
+        {/* <div className="header">
+          <h1>{FormTitles[page]}</h1>
+        </div> */}
+        <div className="body">{PageDisplay()}</div>
+        <div className="footer">
+          {/* <button
+            disabled={page === 0}
+            onClick={() => {
+              setPage((currPage) => currPage - 1)
+            }}
+          >Prev</button> */}
+          <button className={styles.nextButton}
+            onClick={ async (e) => {
+              if(page === FormTitles.length - 1) {
+                alert("Form Submitted")
+                console.log(formData)
+                e.preventDefault()
+                props.addPersonality(formData)
+                navigate(`/result`)
+              } else {
+              setPage((currPage) => currPage +1)
+              }
+            }}
+          >
+            {page === FormTitles.length - 1 ? submitText : nextText}
+          </button>
+        </div>
+      </div>
+    </div>
 
-      <form onSubmit={this.handleSubmit} className={styles.form}>
-      {/* 
-        render the form steps and pass required props in
-      */}
-        <Step1 
-          currentStep={this.state.currentStep} 
-          handleChange={this.handleChange}
-          ans_1={this.state.ans_1}
-        />
-        <Step2 
-          currentStep={this.state.currentStep} 
-          handleChange={this.handleChange}
-          ans_2={this.state.ans_2}
-        />
-        <Step3 
-          currentStep={this.state.currentStep} 
-          handleChange={this.handleChange}
-          ans_3={this.state.ans_3}
-        />
-        <Step4
-          currentStep={this.state.currentStep} 
-          handleChange={this.handleChange}
-          ans_4={this.state.ans_4}
-        />
-        <Step5 
-          currentStep={this.state.currentStep} 
-          handleChange={this.handleChange}
-          ans_5={this.state.ans_5}
-        />
-        <Step6 
-          currentStep={this.state.currentStep} 
-          handleChange={this.handleChange}
-          birthYear={this.state.birthYear}
-        />
 
-        <button type="submit" className={styles.submitButton}>{submitText}</button>
-        {this.nextButton()}
-
-      </form>
-      </react.Fragment>
-    );
-  }
+  )
 }
+
 
 export default PersonalityTest
