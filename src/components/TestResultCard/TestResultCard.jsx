@@ -10,7 +10,7 @@ function TestResultCard({ personality, deletePersonality }) {
   return (
     <>
       <Link to={`/personalities/${personality.id}`} className={styles.card}>
-        <h3 className={styles.name}>{personality.birthYear}</h3>  
+        <h3 className={styles.name}>{personality.name} {personality.zodiac}</h3>  
         <div className={styles.imgBtnArea}>
           <img src='/dog_3d.png' alt="" className={styles.image}/>
           <Link to={`/personalities/${personality.id}/edit`} className={styles.link}>
