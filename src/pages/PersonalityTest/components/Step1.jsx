@@ -40,6 +40,7 @@ function Step1(props) {
         <input 
           className={styles.input}
           type="text" 
+          name="ans_1"
           // placeholder="A"
           value={props.formData.ans_1}
           onChange={(event) => props.setFormData({...props.formData, ans_1: event.target.value })} 

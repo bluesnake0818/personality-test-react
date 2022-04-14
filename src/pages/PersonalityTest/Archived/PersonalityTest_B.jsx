@@ -1,10 +1,10 @@
 import react from "react"
-import Step1 from "./components/Step1"
-import Step2 from "./components/Step2"
-import Step3 from "./components/Step3"
-import Step4 from "./components/Step4"
-import Step5 from "./components/Step5"
-import Step6 from "./components/Step6"
+import Step1 from "../components/Step1"
+import Step2 from "../components/Step2"
+import Step3 from "../components/Step3"
+import Step4 from "../components/Step4"
+import Step5 from "../components/Step5"
+import Step6 from "../components/Step6"
 import ProgressBar from '@ramonak/react-progress-bar'
 import styles from './PersonalityTest.module.css'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'

@@ -6,7 +6,7 @@ const Profile = ({ user, personalities, deletePersonality } ) => {
   return (
     <main className={styles.container}>    
       <h1 className={styles.title}>Welcome, Will!</h1>
-      <Link to='/personality-test' className={styles.link}>
+      <Link to='/personalities/new' className={styles.link}>
         <button className={styles.button}>Add Test</button>
       </Link>    
       {personalities.map((personality) => (

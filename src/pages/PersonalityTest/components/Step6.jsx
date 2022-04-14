@@ -9,89 +9,88 @@ function Step6(props) {
   } 
 
   const slide = TestFormData[props.page]
-  
-  // const currQuestion = `ans_${props.currentStep-1}`
 
-  // const handleChange = evt => {
-	// 	if(evt.target.name === 'birthYear'){
-	// 		const numBirthYear = evt.target.value
-	// 		if(numBirthYear%12 === 0) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'monkey',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 1) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'rooster',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 2) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'dog',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 3) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'pig',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 4) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'rat',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 5) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'ox',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 6) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'tiger',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 7) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'rabbit',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 8) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'dragon',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 9) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'snake',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 10) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'horse',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 		if(numBirthYear%12 === 11) {
-	// 			setFormData({...formData, 
-	// 				zodiac: 'goat',
-	// 				birthYear: evt.target.value
-	// 			})
-	// 		}
-	// 	} else if(evt.target.name === 'name'){
-	// 		setFormData({...formData, 
-	// 			name: evt.target.value
-	// 		})
-	// 	}
+  const handleChange = evt => {
+		if(evt.target.name === 'birthYear'){
+			const numBirthYear = evt.target.value
+			if(numBirthYear%12 === 0) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Monkey',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 1) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Rooster',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 2) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Dog',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 3) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Pig',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 4) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Rat',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 5) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Ox',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 6) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Tiger',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 7) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Rabbit',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 8) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Dragon',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 9) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Snake',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 10) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Horse',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 11) {
+				props.setFormData({...props.formData, 
+					zodiac: 'Goat',
+					birthYear: evt.target.value
+				})
+			}
+		} 
+		// else if(evt.target.name === 'name'){
+		// 	setFormData({...formData, 
+		// 		name: evt.target.value
+		// 	})
+	}
 
 
   return(
@@ -103,24 +102,39 @@ function Step6(props) {
       <input 
         className={styles.bYearInput}
         type="number" 
+				name="birthYear"
         value={props.formData.birthYear}
-        onChange={(event) => props.setFormData({...props.formData, birthYear: event.target.value })} />
-      {/* <input 
-        type="text" 
-        value={props.formData.name}
-        onChange={(event) => props.setFormData({...props.formData, name: event.target.value })} />
-      <input 
-        type="text" 
-        value={props.formData.zodiac}
-        onChange={(event) => props.setFormData({...props.formData, zodiac: event.target.value })} /> */}
+				onChange={handleChange}
+			/>
       <div className={styles.commentArea}>
         <h3 className={styles.question}>{slide.prompt_2}</h3>
       <input 
         className={styles.commentInput}
         type="text" 
+				name="comment"
         value={props.formData.comment}
         onChange={(event) => props.setFormData({...props.formData, comment: event.target.value })} />
       </div>
+			<div className={styles.zodiacArea}>
+				<h3 className={styles.question}>{slide.prompt_3}</h3>
+				<input 
+					className={styles.zodiacInput}
+					type="text" 
+					name="zodiac"
+					value={props.formData.zodiac}
+					onChange={handleChange} 
+				/>
+			</div>
+			<div className={styles.TypeArea}>
+				<h3 className={styles.question}>{slide.prompt_4}</h3>
+				<input 
+					className={styles.TypeInput}
+					type="text" 
+					name="name"
+					value={props.formData.name}
+					onChange={(event) => props.setFormData({...props.formData, name: event.target.value })} 
+				/>
+			</div>
       {/* <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>

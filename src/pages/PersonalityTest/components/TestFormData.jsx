@@ -42,6 +42,8 @@ export const TestFormData = [
     number: 'Q.06',
     prompt_1: 'What is your birth year?',
     prompt_2: 'Leave comment',
+    prompt_3: 'Zodiac',
+    prompt_4: 'Personality Type',
   },   
 
 

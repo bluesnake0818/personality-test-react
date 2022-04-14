@@ -45,6 +45,7 @@ function Step4(props) {
         <input 
           className={styles.input}
           type="text" 
+          name="ans_4"
           // placeholder="A"
           value={props.formData.ans_4}
           onChange={(event) => props.setFormData({...props.formData, ans_4: event.target.value })} 
