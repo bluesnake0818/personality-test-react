@@ -109,7 +109,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
+
 
 .retakeButton, .saveButton {
   width: 50%;
@@ -198,7 +200,7 @@
   }
 
   .shareCard {
-    padding: 0;
+    padding: 2%;
   }
 
   .myTypeCard {

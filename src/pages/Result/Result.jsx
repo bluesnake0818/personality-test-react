@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Result.module.css'
 import BarChart from '../../components/BarChart/BarChart';
+import Button from '../../components/Button/Button';
 // import {
 //   FacebookShareButton,
 //   InstapaperShareButton,
@@ -179,8 +180,10 @@ const Result = ({ profile, handleLogout, user }) => {
           </div>
           {/* <Link to="" onClick={props.handleLogout}> */}
           <div className={styles.buttonArea}>
-            <button className={styles.retakeButton}>Re-take</button>
-            <button className={styles.saveButton}>Save</button>
+            <Link to='/personalities/new'><Button name="Re-take" color="#FF6969"/> </Link>
+            <Link to='/personalities'><Button name="List" color="#6661F1"/> </Link>
+            {/* <button className={styles.retakeButton}>Re-take</button>
+            <button className={styles.saveButton}>Save</button> */}
           </div>
           {/* </Link> */}
 
