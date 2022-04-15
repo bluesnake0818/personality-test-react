@@ -1,19 +1,30 @@
 # hangfive Personality Test - zodiac signs on a date
 
+## Why I Started This
+- 
+
+## Key Features
+- Personality Test
+- Zodiac + Personality Test => combined analysis
+- Save test history
+
 ## Getting Started
-- Link: 
+- <a href="https://personality-test-react.netlify.app/"> App Link</a>
 
 ## Screenshots
+<img src="https://i.imgur.com/S5rOwAp.png"  alt="main services">
+<img src="https://i.imgur.com/AEU80Bt.png"  alt="main services">
+
 
 ## Technologies Used:
-
+- React, PostgreSQL, Flask, Node.JS, CSS
 
 
 ## Credit 
 - Chart: https://www.youtube.com/watch?v=c_9c5zkfQ3Y (Worn Off Keys)
-- 16 Personalities, 9-alike
-- multi-form: https://www.youtube.com/watch?v=wOxP4k9f5rk
-- quizzes: https://www.proprofs.com/quiz-school/personality/playquiz/?title=what-type-of-dating-personality-do-you-have
+- Layout references: 16 Personalities, 9-alike
+- Multi-form: https://www.youtube.com/watch?v=wOxP4k9f5rk
+- Quizzes: https://www.proprofs.com/quiz-school/personality/playquiz/?title=what-type-of-dating-personality-do-you-have
 
 ## Next Steps
 - different avatars for different personality types

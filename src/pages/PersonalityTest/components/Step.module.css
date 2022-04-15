@@ -112,6 +112,8 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
+  /* flex:1; */
+  text-align:center;
 }
 
 .typeInput, .zodiacInput, .bYearInput, .commentInput {
@@ -122,6 +124,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
+  /* text-align:center; */
 }
 
 .bYearInput {
