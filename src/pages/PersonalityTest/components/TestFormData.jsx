@@ -17,7 +17,7 @@ export const TestFormData = [
 
   { 
     number: 'Q.03',
-    question: "Your discussions on dates involve:",
+    question: "Your discussions on dates involve",
     choice_1: '1. What you find interesting.',
     choice_2: '2. What he/she finds interesting.',
     choice_3: '3. Common interests you both enjoy',
@@ -33,7 +33,7 @@ export const TestFormData = [
 
   { 
     number: 'Q.05',
-    question: "When organising a follow up date:",
+    question: "When organising a follow up date",
     choice_1: '1. You find out when it will suit him/her and make sure to clear your schedule.',
     choice_2: '2. You let him/her know when you are available and say you will call.',
     choice_3: '3. You find out when it will suit both of you again and ask to see him/her again.',

@@ -267,17 +267,6 @@
     height: 10rem;
   }
 
-  .buttonArea {
-    display: flex;
-  }
-
-  .link {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
 
 
   .title {
@@ -316,5 +305,20 @@
   .icon {
     width: 12rem;
     height: 12rem;
+  }
+
+
+  .buttonArea {
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link {
+    height: 20rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

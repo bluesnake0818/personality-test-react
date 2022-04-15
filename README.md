@@ -38,4 +38,6 @@
 - Create first and then associate --> (Save)
 - floating buttons
 - move to previous in multi-step form
+- form buttons
 - chart data, friends to hang with --> make dynamic
+- result --> button size (for desktop)
