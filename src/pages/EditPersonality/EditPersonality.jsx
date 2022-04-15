@@ -47,12 +47,15 @@ const EditPersonality = (props) => {
 
   return (
     <main className={styles.container}>    
-      <h1 className={styles.title}>Edit Cat</h1>
-        <form onSubmit={handleSubmit}>
+      <h1 className={styles.title}>Update Comment</h1>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.inputArea}>
           <PersonalityInput form={form} handleChange={handleChange} />
+        </div>
+        <div className={styles.buttonArea}>
           <button type="submit" className={styles.button}>Submit!</button>
-        </form>
-
+        </div>
+      </form>
       <Footer />
     </main>
   )

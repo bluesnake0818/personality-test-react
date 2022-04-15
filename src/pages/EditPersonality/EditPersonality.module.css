@@ -3,14 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
 }
 
-.card {
+.form {
   margin-top: 1rem;
   min-height: 40rem;
   width: 40rem;
-  padding: 5%;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,4 +61,17 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.button {
+  margin: 1rem;
+  width: 50%;
+  height: 6rem;
+  border-radius: 10px;
+  font-size: 14;
+  color: #FF6969;
+  border-color: #FF6969;
+  border-style: solid;
+  border-width: 4px;
+  text-align: center;
 }

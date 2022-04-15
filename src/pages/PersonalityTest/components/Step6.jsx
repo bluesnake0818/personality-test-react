@@ -86,10 +86,6 @@ function Step6(props) {
 				})
 			}
 		} 
-		// else if(evt.target.name === 'name'){
-		// 	setFormData({...formData, 
-		// 		name: evt.target.value
-		// 	})
 	}
 
 
@@ -125,37 +121,8 @@ function Step6(props) {
 					onChange={handleChange} 
 				/>
 			</div>
-			{/* <div className={styles.typeArea}>
-				<h3 className={styles.question}>{slide.prompt_4}</h3>
-				<input 
-					className={styles.typeInput}
-					type="text" 
-					name="name"
-					value={props.formData.name}
-					onChange={(event) => props.setFormData({...props.formData, name: event.target.value })} 
-				/>
-			</div> */}
-      {/* <div className={styles.listArea}>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>
-            <input className={styles.radioInput} type="number" name="birthYear" value={props.birthYear} onChange={props.handleChange}/>
-            <p className={styles.choiceDesc}>{slide.choice_1}</p>
-          </li>
-        </ul>
-      </div> */}
     </div>
   )
 }
 
 export default Step6
-
-{/* <label htmlFor="username">Username</label>
-<input
-  className="form-control"
-  id="username"
-  name="username"
-  type="text"
-  placeholder="Enter username"
-  value={props.username}
-  onChange={props.handleChange}
-  /> */}
