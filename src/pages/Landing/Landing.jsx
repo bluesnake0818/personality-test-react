@@ -12,13 +12,13 @@ const Landing = ({ user }) => {
             <h1 className={styles.shortTitle}>Personality Test</h1>
             <h3 className={styles.subtitle}>zodiac signs on a date</h3>
           </div>
-          <img className={styles.image} src="/rabbit_3d.png" alt="bunny"/>
+          <img className={styles.image} src="/Rabbit_3d.png" alt="bunny"/>
           <Link to='/personalities/new' className={styles.link}>
             <button className={styles.btn} id='start_button'>Start Test</button>
           </Link>
         </div>
           <div className={styles.imageArea}>
-            <img className={styles.imageBig} src="/rabbit_3d.png" alt="bunny"/>
+            <img className={styles.imageBig} src="/Rabbit_3d.png" alt="bunny"/>
           </div>
         <div className={styles.footer}>
           <p>Copyright 2022 HangFive, Inc.</p>

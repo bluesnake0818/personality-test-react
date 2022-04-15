@@ -6,15 +6,20 @@ function TestResultCard({ personality, deletePersonality }) {
   // const friendZod = friend.zodiac
   // const friendZodImg = `/designs_${friendZod}.png`
   const navigate = useNavigate()
-  const imgURL = `/${personality.zodiac.toLowerCase()}_3d.png`
-  
+  // const lowerZod = personality.zodiac.toString().toLowerCase()
+  // console.log('personality zodiac ' + personality.zodiac.toLowerCase())
+  const zodLower = personality.zodiac.toLowerCase()
+
+  console.log(personality.zodiac)
+  const imgURL = `/${personality.zodiac}_3d.png`
+  console.log(imgURL)
 
   return (
     <>
       <Link to={`/personalities/${personality.id}`} className={styles.card}>
         <h3 className={styles.name}>{personality.name} {personality.zodiac}</h3>  
         <div className={styles.imgBtnArea}>
-          <img src={imgURL} alt="" className={styles.image}/>
+          <img src={imgURL} alt="zodiac" className={styles.image}/>
           <Link to={`/personalities/${personality.id}/edit`} className={styles.link}>
             <button className={styles.editButton}>Edit</button> 
           </Link>

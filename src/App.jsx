@@ -13,10 +13,14 @@ import EditPersonality from './pages/EditPersonality/EditPersonality'
 import Confirmation from './pages/Confirmation/Confirmation'
 import * as authService from './services/authService'
 import * as personalityService from './services/personalityService'
+import * as profileService from './services/profileService'
 
 const App = () => {
   const [personalities, setPersonalities] = useState([])
   const [user, setUser] = useState(authService.getUser())
+  const [profile, setProfile] = useState({
+    name: ''
+  })
   const navigate = useNavigate()
   // console.log(user)
 
@@ -27,6 +31,15 @@ const App = () => {
     }
     fetchData()
   }, [])
+
+  useEffect(()=> {
+    if(user) {
+      profileService.getAllProfiles()
+      .then(profiles => {
+        setProfile(profiles.find(profile => profile._id === user.profile))
+      })
+    }
+  }, [user])
 
   const handleLogout = () => {
     authService.logout()
@@ -67,7 +80,7 @@ const App = () => {
         />
         <Route
           path="/personalities/:id" element={
-            <Result handleLogout={handleLogout} user={user} />}
+            <Result handleLogout={handleLogout} user={user} profile={profile} />}
         />
         <Route
           path="/signup-or-login"
@@ -83,7 +96,7 @@ const App = () => {
         />
         <Route
           path="/personalities"
-          element={<Profile user={user} personalities={personalities} deletePersonality={deletePersonality} />}
+          element={<Profile user={user} profile={profile} personalities={personalities} deletePersonality={deletePersonality} />}
         />
         <Route
           path="/personalities/:id/edit" element={

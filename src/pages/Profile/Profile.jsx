@@ -5,7 +5,7 @@ import TestResultCard from '../../components/TestResultCard/TestResultCard';
 const Profile = ({ user, personalities, deletePersonality } ) => {
   return (
     <main className={styles.container}>    
-      <h1 className={styles.title}>Welcome, Will!</h1>
+      <h1 className={styles.title}>Welcome, {user.name}!</h1>
       <Link to='/personalities/new' className={styles.link}>
         <button className={styles.button}>Add Test</button>
       </Link>    
