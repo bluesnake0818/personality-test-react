@@ -17,12 +17,29 @@ import * as profileService from './services/profileService'
 
 const App = () => {
   const [personalities, setPersonalities] = useState([])
+  const navigate = useNavigate()
   const [user, setUser] = useState(authService.getUser())
   const [profile, setProfile] = useState({
     name: ''
   })
-  const navigate = useNavigate()
+  const [personalitiesLoaded, setPersonalitiesLoaded] = useState(false)
   // console.log(user)
+
+
+
+  useEffect(()=> {
+    if(user) {
+      // personalityService.getAll()
+      // .then(allPersonalities => {
+      //   setPersonalities(allPersonalities)
+      //   setPersonalitiesLoaded(true)
+      // })
+      profileService.getAllProfiles()
+      .then(profiles => {
+        setProfile(profiles.find(profile => profile._id === user.profile))
+      })
+    }
+  }, [user])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,15 +48,6 @@ const App = () => {
     }
     fetchData()
   }, [])
-
-  useEffect(()=> {
-    if(user) {
-      profileService.getAllProfiles()
-      .then(profiles => {
-        setProfile(profiles.find(profile => profile._id === user.profile))
-      })
-    }
-  }, [user])
 
   const handleLogout = () => {
     authService.logout()
@@ -76,7 +84,12 @@ const App = () => {
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/personalities/new"
-          element={<PersonalityTest addPersonality={addPersonality} user={user}/>}
+          element={
+            user? 
+            <PersonalityTest addPersonality={addPersonality} user={user}/>
+            :
+            <Navigate to="/signup-or-login" />
+          }
         />
         <Route
           path="/personalities/:id" element={
@@ -96,7 +109,18 @@ const App = () => {
         />
         <Route
           path="/personalities"
-          element={<Profile user={user} profile={profile} personalities={personalities} deletePersonality={deletePersonality} />}
+          element={
+            user? 
+            <Profile 
+              user={user} 
+              profile={profile} 
+              personalities={personalities} 
+              deletePersonality={deletePersonality} 
+              personalitiesLoaded={personalitiesLoaded}
+              />
+            :
+            <Navigate to="/login" />
+          }
         />
         <Route
           path="/personalities/:id/edit" element={

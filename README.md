@@ -27,6 +27,7 @@
 - Quizzes: https://www.proprofs.com/quiz-school/personality/playquiz/?title=what-type-of-dating-personality-do-you-have
 
 ## Next Steps
+- move sign up to back --> after seeing results, if you want to add more log in (associate. -- link)
 - different avatars for different personality types
 - different types of tests
 - create ability for guest and associate the tests to profile
