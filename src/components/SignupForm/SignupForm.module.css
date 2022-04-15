@@ -20,11 +20,6 @@
   border-style: solid;
 }
 
-/* .label,
-.button {
-  margin-right: .5rem;
-} */
-
 .inputContainer {
   margin-bottom: 1rem;
   width: 100%;
@@ -32,7 +27,6 @@
 
 .label {
   color: #6661F1;
-  /* margin-bottom: 2rem; */
 }
 
 .inputBox {
@@ -51,7 +45,6 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
 .link {

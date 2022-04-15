@@ -27,40 +27,44 @@ const LoginForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.password}
-          name="password"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className={styles.button}>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+    <div className={styles.container}>
+      <form
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        className={styles.form}
+      >
+        <div className={styles.inputContainer}>
+          <label htmlFor="email" className={styles.label}>Email</label>
+          <input
+            className={styles.inputBox}
+            type="text"
+            autoComplete="off"
+            id="email"
+            value={formData.email}
+            name="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="password" className={styles.label}>Password</label>
+          <input
+            className={styles.inputBox}
+            type="password"
+            autoComplete="off"
+            id="password"
+            value={formData.password}
+            name="password"
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.buttonContainer}>
+          <button className={styles.loginButton}>Log In</button>
+          <Link className={styles.link} to="/">
+            <button className={styles.cancelButton}>Cancel</button>
+          </Link>
+        </div>
+      </form>
+    </div>
   )
 }
 
