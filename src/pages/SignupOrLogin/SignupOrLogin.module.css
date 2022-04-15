@@ -7,8 +7,6 @@
 }
 
 .card {
-  /* margin-top: 8rem; */
-  /* min-height: 60rem; */
   min-width: 40rem;
   padding-right: 5%;
   padding-left: 5%;
@@ -16,10 +14,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* background-color: #ffffff;
-  border-radius: 20px;
-  border-color: #6661F1;
-  border-style: solid; */
   min-height: 40rem;
 }
 
@@ -41,7 +35,6 @@
 
 .signupLink {
   width: 50%;
-  /* margin-bottom: 1rem; */
 }
 
 .signupButton {

@@ -37,18 +37,7 @@ const PersonalityTest_B = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // console.log(this.state)
-    // const { ans_1, ans_2, ans_3, ans_4, ans_5, birthYear } = this.state
-    // props.addPersonality(this.state)
     navigate(`/result`)
-
-    // alert(`Your test details: \n 
-    //       Answer 1: ${ans_1} \n 
-    //       Answer 2: ${ans_2} \n 
-    //       Answer 3: ${ans_3} \n 
-    //       Answer 4: ${ans_4} \n 
-    //       Answer 5: ${ans_5} \n 
-    //       Birth Year: ${birthYear}`)
   }
   
   const _next = () => {

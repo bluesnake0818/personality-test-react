@@ -5,7 +5,6 @@ import Button from '../../components/Button/Button';
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
-      {/* <div className={styles.bodyContent}> */}
         <div className={styles.card}>
           <div className={styles.titleArea}>
             <h1 className={styles.fullTitle}>hangfive Personality Test</h1>
@@ -24,7 +23,6 @@ const Landing = ({ user }) => {
           <p>Copyright 2022 HangFive, Inc.</p>
           <p>All rights reserved.</p>
         </div>
-      {/* </div> */}
       <div className={styles.footerInLine}>
         <p>Copyright 2022 HangFive, Inc. All rights reserved.</p>
       </div>

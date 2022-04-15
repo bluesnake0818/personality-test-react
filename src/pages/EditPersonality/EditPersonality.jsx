@@ -1,13 +1,10 @@
 import styles from './EditPersonality.module.css'
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
 
 import {getOne} from '../../services/personalityService'
 
-// Components
 import PersonalityInput from './PersonalityInput'
 
 const EditPersonality = (props) => {

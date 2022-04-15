@@ -5,12 +5,7 @@ import { Link } from 'react-router-dom'
 import styles from './Result.module.css'
 import BarChart from '../../components/BarChart/BarChart';
 import Button from '../../components/Button/Button';
-// import {
-//   FacebookShareButton,
-//   InstapaperShareButton,
-// } from "react-share";
 import ShareLink from 'react-facebook-share-link'
-// import InstagramEmbed from 'react-instagram-embed'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 // Services
@@ -31,33 +26,14 @@ const Result = ({ profile, handleLogout, user }) => {
   
   useEffect(() => {
     const fetchOne = async () => {
-      console.log("getOne")
       const data = await getOne(id)
-      console.log(data)
       setPersonality(data.personality)
     }
     fetchOne()
   }, [id])
 
-  // if (!personality) return <h1>Loading</h1>
-  // const [zodiacs, setZodiacs] = useState(ZodiacData)
-  // const [zodiacObj, setZodiacObj] = useState(
-  //   {} 
-  // )
-  
-  // useEffect(() => {
-  //   if (props.profile.zodiac)
-  //     {setZodiacObj(zodiacs.find(zodiacObj => zodiacObj.id === props.profile.zodiac))}
-  //   },[props.profile.zodiac])
 
-  // const yourZod = props.profile.zodiac
-  // const yourZodImg = `/designs_${yourZod}.png`
-  // const bff = zodiacObj.bff
-  // const nemesis = zodiacObj.nemesis
-  // const yourBffImg = `/designs_${bff}.png`
-  // const yourNemesisImg = `/designs_${nemesis}.png`
   const imgURL = `/${personality.zodiac}_3d.png`
-  // const zodiac = personality.zodiac.toLowerCase()
  
   let zodIdx = 0
 
@@ -92,14 +68,6 @@ const Result = ({ profile, handleLogout, user }) => {
   return (
     <div className={styles.container}>
       
-      {/* {1===0 ?
-        <div className={styles.loading}>
-          <h1 className={styles.title}>Loading...</h1>
-          <img src="/monkey_3d.png" className={styles.image}/>
-          <p className={styles.note}>Analyzing your personality type..</p>
-          <p className={styles.note}>Buckle up!</p>
-        </ div>
-        : */}
         <div className={styles.result}>
           <div className={styles.myTypeCard}>
             <h1 className={styles.title}>{personality.name} {personality.zodiac}</h1>
@@ -193,7 +161,6 @@ const Result = ({ profile, handleLogout, user }) => {
             <p>Copyright 2022 HangFive, Inc. All rights reserved.</p>
           </div>
         </div>
-      {/* } */}
     </div>
   )
 }

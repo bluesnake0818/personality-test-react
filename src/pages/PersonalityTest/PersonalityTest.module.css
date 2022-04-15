@@ -1,13 +1,7 @@
 .header {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
 }
-
-
 
 .prevButton {
   grid-column: 1/2;
@@ -23,12 +17,8 @@
 .currentStep {
   grid-column: 3/4;
   margin: 7.5px 0 7.5px 0;
-  /* margin: 0;
-  font-size: 1rem;
-  text-align: left; */
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: flex-end;
   align-items: center;
 }
@@ -46,27 +36,10 @@
   right: 10%;
   font-size: 4rem;
   color: #000000;
-  /* color: #6661F1; */
   z-index: 10;
   cursor: pointer;
   user-select: none;
 }
-
-/* .submitButton {
-  position: absolute;
-  width: 10rem;
-  top: 50%;
-  right: 10%;
-  font-size: 2rem;
-  color: #000000;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 20px;
-  background-color: rgba(255,255,255, 0.5);
-  border-style: none;
-  font-size: 1rem;
-} */
 
 .nextButton {
   position: absolute;
@@ -75,7 +48,6 @@
   right: 10%;
   font-size: 2rem;
   color: #000000;
-  /* color: #6661F1; */
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -91,7 +63,6 @@
   width: 100%;
   height: 10px;
   background-color: white;
-  /* margin-bottom: 50px; */
 }
 
 .progressbar div {
@@ -103,6 +74,5 @@
 @media only screen and (min-width: 768px) {
   .rightArrow {
     color: #ffffff;
-    /* color: #6661F1; */
   }
 }

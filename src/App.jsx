@@ -23,17 +23,11 @@ const App = () => {
     name: ''
   })
   const [personalitiesLoaded, setPersonalitiesLoaded] = useState(false)
-  // console.log(user)
 
 
 
   useEffect(()=> {
     if(user) {
-      // personalityService.getAll()
-      // .then(allPersonalities => {
-      //   setPersonalities(allPersonalities)
-      //   setPersonalitiesLoaded(true)
-      // })
       profileService.getAllProfiles()
       .then(profiles => {
         setProfile(profiles.find(profile => profile._id === user.profile))
@@ -58,7 +52,6 @@ const App = () => {
   const addPersonality = async (personalityData) => {
     const personality = await personalityService.create(personalityData)
     setPersonalities([...personalities, personality])
-    // navigate('/result')
   }
 
   const updatePersonality = async (personalityData) => {
@@ -126,17 +119,9 @@ const App = () => {
           path="/personalities/:id/edit" element={
             <EditPersonality personalities={personalities} updatePersonality={updatePersonality} user={user} />}
         />
-        {/* <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
-        /> */}
         <Route path="/personalities/:id/confirmation" element={
             <Confirmation deletePersonality={deletePersonality} user={user} />} 
         />
-        {/* <Route
-          path="/personalities/:id/confirmation"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
-        /> */}
       </Routes>
     </>
   )

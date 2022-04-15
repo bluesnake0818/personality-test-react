@@ -27,17 +27,10 @@
 .image {
   width: 10rem;
   height: 10rem;
-  /* padding: 1rem; */
   margin: 1rem;
 }
 
-/* .title {
-  text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 7rem;
-  font-size: 1.8rem;
-  color: #6661F1;
-} */
+
 
 .subTitle {
 
@@ -97,90 +90,3 @@
   color: whitesmoke;
   background-color: #FF6969;
 }
-
-
-/* .cardFooter {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.list {
-  list-style: none;
-  padding: 1rem;
-}
-
-.listItem {
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-bottom: .4rem;
-}
-
-.listFooterItem {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.button-area {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.edit-link {
-  font-size: 1.4rem;
-}
-
-.editButton {
-  width: 10rem;
-  font-size: 1.4rem;
-  height: 3rem;
-  color: #FFC83D ;
-  border-color: #FFC83D;
-  text-align: center;
-  background-color: transparent;
-  margin: 0;
-}
-
-.deleteButton {
-  width: 10rem;
-  height: 3rem;
-  font-size: 1.4rem;
-  color: #FF6969;
-  border-color: #FF6969 ;  
-  background-color: transparent ;
-  margin: 0;
-}
-
-.editButton:hover {
-  color: whitesmoke;
-  background-color: #FFC83D;
-}
-
-.deleteButton:hover {
-  color: whitesmoke;
-  background-color: #FF6969;
-}
-
-.compatLink {
-  color: #000000DE
-}
-
-.compatLink:hover {
-  color: #6661f1;
-  background-color: #FFC83D;
-}
-
-.imgInCard {
-  width: 5rem;
-  height: 5rem;
-  margin: 0;
-}
-
-.linkForButton{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */

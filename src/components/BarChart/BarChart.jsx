@@ -13,7 +13,6 @@ import {
 } from 'chart.js';
 
 import { Bar } from 'react-chartjs-2';
-// import faker from 'faker';
 
 ChartJS.register(
   CategoryScale,
@@ -31,7 +30,6 @@ export const options = {
       borderWidth: 0,
     },
   },
-  responsive: true,
   plugins: {
     title: {
       display: true,
@@ -46,22 +44,6 @@ export const options = {
 
 const labels = ['Planning', 'Execution', 'PR', 'Patience'];
 
-// export const data = {
-//   labels,
-//   datasets: [
-//     {
-//       data: [90, 76, 48, 82],
-//       backgroundColor: [
-//         '#ADFF5B',
-//         '#63C7FF',
-//         '#FF702E',
-//         '#FFC83D',
-//       ],
-//     },
-//   ],
-// };
-
-
 
 const BarChart = ( { user, personality } ) => {
   const [userTypes, setUserTypes] = useState(UserTypeData)
@@ -74,8 +56,6 @@ const BarChart = ( { user, personality } ) => {
       {setUserTypeObj(userTypes.find(userTypeObj => userTypeObj.id === personality.name))}
     },[personality.name])
 
-  // const chartData = [userTypeObj.planning, userTypeObj.execution, userTypeObj.PR, userTypeObj.patience]
-  // console.log(userTypeObj)
 
   const data =
   {
@@ -97,7 +77,6 @@ const BarChart = ( { user, personality } ) => {
   return (
     <div className={styles.container}>
       <Bar 
-        responsive={true}
         options={options} 
         data=
           {data} 

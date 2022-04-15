@@ -37,12 +37,6 @@ function Step5(props) {
         name: 'The Charmer'
       })
     }
-
-
-    // console.log('step 5 handlechange ' + props.formData.ans_1)
-    // props.setFormData({...props.formData, 
-    //   name: 'The Martyr',
-    //   ans_5: event.target.value })
   }
 
   return(
@@ -51,29 +45,17 @@ function Step5(props) {
         <h1 className={styles.questionNo}>{slide.number}</h1>
         <h3 className={styles.question}>{slide.question}</h3>
       </div>
-      {/* <input 
-        className={styles.input}
-        type="text" 
-        value={props.formData.ans_5}
-        onChange={(event) => props.setFormData({...props.formData, ans_5: event.target.value })} /> */}
       <div className={styles.listArea}>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            {/* <input className={styles.radioInput} type="radio" name={currQuestion} value='1' onChange={props.handleChange}/> */}
             <p className={styles.choiceDesc}>{slide.choice_1}</p>
           </li>
           <li className={styles.listItem}>
-            {/* <input className={styles.radioInput} type="radio" name={currQuestion} value='2' onChange={props.handleChange}/> */}
             <p className={styles.choiceDesc}>{slide.choice_2}</p>
           </li>
           <li className={styles.listItem}>
-            {/* <input className={styles.radioInput} type="radio" name={currQuestion} value='3' onChange={props.handleChange}/> */}
             <p className={styles.choiceDesc}>{slide.choice_3}</p>
           </li>
-          {/* <li className={styles.listItem}>
-            <input className={styles.radioInput} type="radio" name={currQuestion} value='4' onChange={props.handleChange}/>
-            <p className={styles.choiceDesc}>{slide.choice_4}</p>
-          </li> */}
         </ul>
       </div>
       <div className={styles.inputArea}>
@@ -82,7 +64,6 @@ function Step5(props) {
           className={styles.input}
           type="text" 
           name="ans_5"
-          // placeholder="A"
           value={props.formData.ans_5}
           onChange={handleChange} 
         />

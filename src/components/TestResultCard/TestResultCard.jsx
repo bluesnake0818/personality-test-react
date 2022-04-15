@@ -1,18 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './TestResultCard.module.css'
-import { ZodiacMatchData } from '../../pages/Result/Archived/ZodiacMatchData'
+
 
 function TestResultCard({ personality, deletePersonality }) {
-  // const friendZod = friend.zodiac
-  // const friendZodImg = `/designs_${friendZod}.png`
   const navigate = useNavigate()
-  // const lowerZod = personality.zodiac.toString().toLowerCase()
-  // console.log('personality zodiac ' + personality.zodiac.toLowerCase())
-  const zodLower = personality.zodiac.toLowerCase()
-
-  console.log(personality.zodiac)
   const imgURL = `/${personality.zodiac}_3d.png`
-  console.log(imgURL)
 
   return (
     <>
@@ -23,9 +15,6 @@ function TestResultCard({ personality, deletePersonality }) {
           <Link to={`/personalities/${personality.id}/edit`} className={styles.link}>
             <button className={styles.editButton}>Edit</button> 
           </Link>
-          {/* <Link to={`/personalities/${personality.id}/confirmation`} className={styles.link} personality={personality}>
-            <button className={styles.deleteButton}>Delete</button> 
-          </Link> */}
           <Link
             className={styles.linkForButton}
             to=''
@@ -37,7 +26,6 @@ function TestResultCard({ personality, deletePersonality }) {
               Delete
             </button>
           </Link>
-          {/* <button className={styles.deleteButton} onClick={() => navigate(`/personalities/${personality.id}/confirmation`, { state: personality })}>Delete</button> */}
         </div>
         <div className={styles.listArea}>
           <ul className={styles.list}>
@@ -50,41 +38,6 @@ function TestResultCard({ personality, deletePersonality }) {
       </Link>
       
     </>
-    // <Link className={styles.linkToShowCompat} state={{friend}} to="/showCompat">
-    //   <div className={styles.card}>
-    //     <ul className={styles.list}>
-    //       <li className={styles.listItem}>
-    //         Birth Year: {friend.birthYear}
-    //       </li>
-    //       <li className={styles.listItem}>
-    //         Zodiac Sign: {friendZod}
-    //       </li>
-    //       <li className={styles.listFooterItem}>
-    //         <Link
-    //           className={styles.linkForButton}
-    //           to='/edit'
-    //           state={{friend}}
-    //         >
-    //           <button className={styles.editButton}>
-    //             Edit
-    //           </button>
-    //         </Link>
-    //         <Link
-    //           className={styles.linkForButton}
-    //           to=''
-    //         >
-    //           <button
-    //             className={styles.deleteButton}
-    //             onClick={()=> handleDeleteFriend(friend._id)}
-    //           >
-    //           Delete
-    //           </button>
-    //         </Link>
-    //         <img className={styles.imgInCard} src={friendZodImg} alt="" />
-    //       </li>
-    //     </ul>
-    //   </div>
-    // </Link>
     )
     
   }

@@ -3,9 +3,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* height: inherit; */
-  /* padding-top: 12.5%; 
-  min-height: calc(100vh - 20px); */
   width: 100%;
 }
 
@@ -23,7 +20,6 @@
 }
 
 .shortTitle {
-  /* display: inline-block; */
   color: #ffffff;
   text-align: center;
   font-size: 2rem;
@@ -172,7 +168,6 @@
   }
 
   .link, .btn {
-    /* width: 80%; */
     height: 12rem;
     font-size: 2.8rem;
   }

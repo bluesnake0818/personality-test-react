@@ -41,7 +41,6 @@ const TestForm = () => {
 
   const handleSubmit = evt => {
 		evt.preventDefault()
-    console.log(evt.target)
 		const testFormData = new FormData()
     testFormData.append('ans_0', formData.ans_0)
 		testFormData.append('ans_1', formData.ans_1)
@@ -49,16 +48,12 @@ const TestForm = () => {
 		testFormData.append('ans_3', formData.ans_3)
     testFormData.append('ans_4', formData.ans_4)
 		testFormData.append('ans_5', formData.ans_5)
-    // props.handleAddFriend(friendFormData)		
     current === length - 1 ?  alert('end of form') : setCurrent(current + 1)
     currQuestion = `ans_${current}`
-    // console.log(formAnswers)
   }
 
   return (
     <section className={styles.card}>
-        {/* <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} /> */}
-        {/* <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} /> */}
         
         {TestFormData.map((slide, index) => {
           return (

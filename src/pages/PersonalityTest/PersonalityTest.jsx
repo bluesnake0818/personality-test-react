@@ -55,27 +55,13 @@ function PersonalityTest(props) {
         ></div>
       </div>
       <div className="form-container">
-        {/* <div className="header">
-          <h1>{FormTitles[page]}</h1>
-        </div> */}
         <div className="body">{PageDisplay()}</div>
         <div className="footer">
-          {/* <button
-            disabled={page === 0}
-            onClick={() => {
-              setPage((currPage) => currPage - 1)
-            }}
-          >Prev</button> */}
           <button className={styles.nextButton}
             onClick={ async (e) => {
               if(page === FormTitles.length - 1) {
                 alert("Form Submitted")
-                console.log(formData)
-                e.preventDefault()
-                
-
-              
-              
+                e.preventDefault()    
                 props.addPersonality(formData)
                 navigate(`/personalities`)
               } else {

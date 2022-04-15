@@ -1,7 +1,6 @@
 import react from "react"
 import { TestFormData } from './TestFormData';
 import styles from './Step.module.css'
-import Button from '../../../components/Button/Button';
 
 function Step6(props) {
   if (props.page !== 5) {
