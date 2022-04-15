@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Result.module.css'
 import BarChart from '../../components/BarChart/BarChart';
+// import {
+//   FacebookShareButton,
+//   InstapaperShareButton,
+// } from "react-share";
+import ShareLink from 'react-facebook-share-link'
+// import InstagramEmbed from 'react-instagram-embed'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 // Services
 import { getOne } from '../../services/personalityService'
@@ -154,10 +161,20 @@ const Result = ({ profile, handleLogout, user }) => {
           <div className={styles.shareCard}>
             <h5 className={styles.shareTitle}>Share my personality type</h5>
             <div className={styles.shareButtons}>
-              <img src='/Facebook.png' alt="" className={styles.icon}/>
-              <img src='/Twitter.png' alt="" className={styles.icon}/>
-              <img src='/Instagram.png' alt="" className={styles.icon}/>
-              <img src='/URL.png' alt="" className={styles.icon}/>
+              <ShareLink link='https://personality-test-react.netlify.app/'>
+                {link => (
+                    <a href={link} target='_blank'><img src='/Facebook.png' alt="" className={styles.icon}/></a>
+                )}
+              </ShareLink>
+              <a className={styles.linkAffiliate} href="https://www.twitter.com" target="_blank">
+                <img src='/Twitter.png' alt="" className={styles.icon}/>
+              </a>
+              <a className={styles.linkAffiliate} href="https://www.instagram.com" target="_blank">
+                <img src='/Instagram.png' alt="" className={styles.icon}/>
+              </a>
+              <CopyToClipboard text='https://personality-test-react.netlify.app/'>
+                <img src='/URL.png' alt="" className={styles.icon}/>
+              </CopyToClipboard>
             </div>
           </div>
           {/* <Link to="" onClick={props.handleLogout}> */}
