@@ -2,10 +2,9 @@
 
 ## Why I Started This
 - Last of the four zodiac app series. 
-- Always thought it would be great to mix some user engagement with zodiac, 
-  - because you really invest your time and thoughts in the problems and believe in them. 
-  - more "compatible" data to work with. 
-- Focused on making it responsive
+- Always thought it would be great to combine a personality test with the zodiac content because, 
+  - users invest their time and energy while answering the questions ==> become more invested in the results. 
+  - more "compatible" data points to work with for matching in social discovery. 
 
 ## Key Features
 - Personality Test
@@ -27,7 +26,7 @@
 ## Credit 
 - Chart: https://www.youtube.com/watch?v=c_9c5zkfQ3Y (Worn Off Keys)
 - Layout references: 16 Personalities, 9-alike
-- Multi-form: https://www.youtube.com/watch?v=wOxP4k9f5rk
+- Multi-step form: https://www.youtube.com/watch?v=wOxP4k9f5rk
 - Quizzes: https://www.proprofs.com/quiz-school/personality/playquiz/?title=what-type-of-dating-personality-do-you-have
 
 ## Next Steps
@@ -36,7 +35,7 @@
 - different types of tests
 - create ability for guest and associate the tests to profile
 - Create first and then associate --> (Save)
-- floating buttons
+- paginate or floating buttons
 - move to previous in multi-step form
 - form buttons
 - chart data, friends to hang with --> make dynamic

@@ -73,15 +73,3 @@ function Step5(props) {
 }
 
 export default Step5
-
-
-{/* <label htmlFor="username">Username</label>
-<input
-  className="form-control"
-  id="username"
-  name="username"
-  type="text"
-  placeholder="Enter username"
-  value={props.username}
-  onChange={props.handleChange}
-  /> */}
