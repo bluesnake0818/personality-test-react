@@ -95,8 +95,13 @@ const Result = ({ profile, handleLogout, user }) => {
         <div className={styles.result}>
           <div className={styles.myTypeCard}>
             <h1 className={styles.title}>{personality.name} {personality.zodiac}</h1>
-            <img src={imgURL} alt="" className={styles.image}/>
-            <BarChart />
+            <div className={styles.imgChartArea}>
+              <img src={imgURL} alt="" className={styles.image}/>
+              <div className={styles.chartContainer}>
+                <BarChart className={styles.chart} user={user} personality={personality} />
+              </div>
+              <img src={imgURL} alt="" className={styles.imageBig}/>
+            </div>
             <ul className={styles.list}>
               <li>
                 <h5 className={styles.descTitle}>First Impressions</h5>
