@@ -20,3 +20,5 @@
 - different types of tests
 - create ability for guest and associate the tests to profile
 - Create first and then associate --> (Save)
+- floating buttons
+- move to previous in multi-step form

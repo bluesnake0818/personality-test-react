@@ -61,8 +61,13 @@
 
 .link, .btn {
   width: 80%;
-  /* height:  */
   margin: 3rem 0 3rem 0;
+}
+
+.btn {
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 10px;
 }
 
 .link {
@@ -173,3 +178,4 @@
   }
 
 }
+
