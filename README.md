@@ -1,7 +1,11 @@
 # hangfive Personality Test - zodiac signs on a date
 
 ## Why I Started This
-- 
+- Last of the four zodiac app series. 
+- Always thought it would be great to mix some user engagement with zodiac, 
+  - because you really invest your time and thoughts in the problems and believe in them. 
+  - more "compatible" data to work with. 
+- Focused on making it responsive
 
 ## Key Features
 - Personality Test
@@ -34,3 +38,4 @@
 - Create first and then associate --> (Save)
 - floating buttons
 - move to previous in multi-step form
+- chart data, friends to hang with --> make dynamic

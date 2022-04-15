@@ -6,7 +6,6 @@ import Step4 from "./components/Step4"
 import Step5 from "./components/Step5"
 import Step6 from "./components/Step6"
 import styles from './PersonalityTest.module.css'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
 

@@ -13,29 +13,14 @@ const TestForm = () => {
     ans_3: '',
     ans_4: '',
     ans_5: '',
-    // birthYear: null,
   })
   const [current, setCurrent] = useState(0)
   const length = TestFormData.length
   let currQuestion = `ans_${current}`
 
-  // useEffect(()=> {
-  //   formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
-  // }, [formData])
-
   const handleChange = evt => {
 			setFormData({...formData, [evt.target.name]: evt.target.value })
 		}
-
-
-  // const nextSlide = () => {
-  //   current === length - 1 ?  alert('end of form') : setCurrent(current + 1)
-    
-  // }
-
-  // const prevSlide = () => {
-  //   current === 0 ? alert('beginning of form') : setCurrent(current === 0 ? length - 1 : current -1)
-  // }
 
   
 

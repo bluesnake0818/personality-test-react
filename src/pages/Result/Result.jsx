@@ -111,14 +111,12 @@ const Result = ({ profile, handleLogout, user }) => {
           <div className={styles.card}>
             <h3 className={styles.name}>The ever-cautious dog</h3>  
             <img src='/dog_3d.png' alt="" className={styles.imageFriend}/>
-            {/* <p className={styles.desc}>description</p> */}
           </div>
 
           <h5 className={styles.category}>They make you a better person</h5>
           <div className={styles.card}>
             <h3 className={styles.name}>The curious goat</h3>  
             <img src='/goat_3d.png' alt="" className={styles.imageFriend}/>
-            {/* <p className={styles.desc}>description</p> */}
           </div>
 
           <h5 className={styles.category}>Meet more friends at hangfive app</h5>
