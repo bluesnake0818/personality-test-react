@@ -6,6 +6,13 @@
   width: 100%;
 }
 
+
+.category{
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .result {
   display: flex;
   flex-direction: column;
@@ -15,7 +22,7 @@
 }
 
 .card {
-  margin-top: 8rem;
+  margin-bottom: 8rem;
   min-height: 60rem;
   width: 40rem;
   padding: 5%;
@@ -59,10 +66,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 8rem;
 }
 
 .downloadCard {
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
   min-height: 60rem;
   width: 40rem;
   padding: 5%;
@@ -113,7 +121,7 @@
 }
 
 
-.image {
+.image, .imageFriend {
   width: 20rem;
   height: 20rem;
 }
@@ -162,6 +170,10 @@
   text-align: center;
 }
 
+.name {
+  color: #777777;
+}
+
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -174,15 +186,23 @@
     grid-column: 1/4;
   }
 
+  .category{
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+
   .card {
     min-height: 40rem;
     width: 100%;
-    color: #777777
+    color: #777777;
+    margin-top: 0;
   }
 
   .downloadCard {
     min-height: 40rem;
     width: 100%;
+    margin-top: 0;
   }
 
   .shareCard {

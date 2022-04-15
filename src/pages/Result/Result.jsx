@@ -110,22 +110,22 @@ const Result = ({ profile, handleLogout, user }) => {
           <h5 className={styles.category}>Best friend to hang with</h5>
           <div className={styles.card}>
             <h3 className={styles.name}>The ever-cautious dog</h3>  
-            <img src='/dog_3d.png' alt="" className={styles.image}/>
-            <p className={styles.desc}>description</p>
+            <img src='/dog_3d.png' alt="" className={styles.imageFriend}/>
+            {/* <p className={styles.desc}>description</p> */}
           </div>
 
           <h5 className={styles.category}>They make you a better person</h5>
           <div className={styles.card}>
             <h3 className={styles.name}>The curious goat</h3>  
-            <img src='/goat_3d.png' alt="" className={styles.image}/>
-            <p className={styles.desc}>description</p>
+            <img src='/goat_3d.png' alt="" className={styles.imageFriend}/>
+            {/* <p className={styles.desc}>description</p> */}
           </div>
 
           <h5 className={styles.category}>Meet more friends at hangfive app</h5>
-          <div className={styles.downloadCard}>
+          <a className={styles.downloadCard} href="https://apps.apple.com/us/app/hang5-find-your-zodiac-bff/id1531290410" target="_blank">
             <img src='/app_store.png' alt="" className={styles.appStoreImg}/>
             <img src='/app_preview.png' alt="" className={styles.appPreviewImg}/>
-          </div>
+          </a>
 
           <div className={styles.shareCard}>
             <h5 className={styles.shareTitle}>Share my personality type</h5>
