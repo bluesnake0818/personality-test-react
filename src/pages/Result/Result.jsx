@@ -139,22 +139,22 @@ const Result = ({ profile, handleLogout, user }) => {
             
           </div>
 
+          <h5 className={styles.category}>Best friend to hang with</h5>
           <div className={styles.card}>
-            <h5 className={styles.category}>Best friend to hang with</h5>
             <h3 className={styles.name}>The ever-cautious dog</h3>  
             <img src='/dog_3d.png' alt="" className={styles.image}/>
             <p className={styles.desc}>description</p>
           </div>
 
+          <h5 className={styles.category}>They make you a better person</h5>
           <div className={styles.card}>
-            <h5 className={styles.category}>They make you a better person</h5>
             <h3 className={styles.name}>The curious goat</h3>  
             <img src='/goat_3d.png' alt="" className={styles.image}/>
             <p className={styles.desc}>description</p>
           </div>
 
+          <h5 className={styles.category}>Meet more friends at hangfive app</h5>
           <div className={styles.downloadCard}>
-            <h5 className={styles.category}>Meet more friends at hangfive app</h5>
             <img src='/app_store.png' alt="" className={styles.appStoreImg}/>
             <img src='/app_preview.png' alt="" className={styles.appPreviewImg}/>
           </div>
@@ -178,19 +178,13 @@ const Result = ({ profile, handleLogout, user }) => {
               </CopyToClipboard>
             </div>
           </div>
-          {/* <Link to="" onClick={props.handleLogout}> */}
+
           <div className={styles.buttonArea}>
-            <Link to='/personalities/new'><Button name="Re-take" color="#FF6969"/> </Link>
-            <Link to='/personalities'><Button name="List" color="#6661F1"/> </Link>
-            {/* <button className={styles.retakeButton}>Re-take</button>
-            <button className={styles.saveButton}>Save</button> */}
+            <Link className={styles.link} to='/personalities/new'><Button className={styles.retakeButton} name="Re-take" color="#FF6969"/> </Link>
+            <Link className={styles.link} to='/personalities'><Button className={styles.ListButton} name="List" color="#6661F1"/> </Link>
+
           </div>
-          {/* </Link> */}
 
-
-          {/* <Link to="" onClick={props.handleLogout}>
-              <button className={styles.button}>Log Out</button>
-          </Link> */}
           <div className={styles.footer}>
             <p>Copyright 2022 HangFive, Inc.</p>
             <p>All rights reserved.</p>

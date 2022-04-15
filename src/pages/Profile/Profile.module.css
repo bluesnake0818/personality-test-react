@@ -1,10 +1,11 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
 }
+
 
 .title {
   text-align: center;
@@ -27,32 +28,34 @@
   margin: 0;
 }
 
-/* 
-.list {
-  list-style: none;
-  padding-left: 0;
-}
+@media only screen and (min-width: 768px) {
+  .subContainer {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* margin-top: 8rem; */
+    width: 100%;
+  }
 
-.listItem {
-  border-color: #6661f1;
-  margin-bottom: 1rem;
-}
+  .buttonContainer {
+    width: 50%;
+  }
 
-.cardTitle {
-  font-size: 1.4rem;
-  margin-top: .6rem;
-  margin-bottom: .6rem;
-}
+  .listContainer {
+    width: 50%;
+  }
 
-.friendListTitle {
-  display: flex;
-  justify-content: flex-start;
-  width: 34rem;
+  .button {
+    width: 20rem;
+    margin-top: 26rem;
+    font-size: 1.8rem;
+    color: #000000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 20px;
+    background-color: rgba(255,255,255, 0.5);
+    border-style: none;
+  }
 }
-
-.friendListTitleParagraph {
-  margin-bottom: 0;
-  margin-top: 4rem;
-  font-weight: bold;
-  font-size: 1.6rem;
-} */

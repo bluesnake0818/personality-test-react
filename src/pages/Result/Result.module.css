@@ -113,19 +113,17 @@
 }
 
 
-.retakeButton, .saveButton {
-  width: 50%;
-}
 
-.retakeButton {
+
+/* .retakeButton {
   color: #6661F1;
   border-color: #6661F1;
-}
+} */
 
-.saveButton {
+/* .saveButton {
   color: #FF6969;
   border-color: #FF6969;
-}
+} */
 
 .image {
   width: 20rem;
@@ -188,6 +186,28 @@
     grid-column: 1/4;
   }
 
+  .card {
+    min-height: 40rem;
+    width: 100%;
+    color: #777777
+  }
+
+  .downloadCard {
+    min-height: 40rem;
+    width: 100%;
+  }
+
+  .shareCard {
+    margin-top: 8rem;
+    width: 100%;
+  }
+
+  .shareButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+  }
+
   .title {
     /* grid-column: 3/4; */
     text-align: left;
@@ -199,9 +219,9 @@
     margin-top: 5rem;
   }
 
-  .shareCard {
+  /* .shareCard {
     padding: 2%;
-  }
+  } */
 
   .myTypeCard {
     grid-column: 1/2;
@@ -238,8 +258,26 @@
     display: none;
   }
 
+  .icon {
+    width: 10rem;
+    height: 10rem;
+  }
 
-  
+  .buttonArea {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+  }
+
+  .link {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
   .title {
     font-size: 2.4rem;
   }
@@ -247,6 +285,8 @@
   .footer {
     display: none;
   }
+
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -271,6 +311,11 @@
 
   .desc {
     font-size: 1.6rem;
+  }
+
+  .icon {
+    width: 12rem;
+    height: 12rem;
   }
 }
 
