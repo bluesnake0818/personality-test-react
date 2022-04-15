@@ -20,7 +20,7 @@
 
 
 ## Technologies Used:
-- React, PostgreSQL, Flask, Node.JS, CSS
+- React, PostgreSQL, Flask, Express, CSS
 
 
 ## Credit 
