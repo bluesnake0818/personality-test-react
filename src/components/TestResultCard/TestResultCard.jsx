@@ -29,10 +29,10 @@ function TestResultCard({ personality, deletePersonality }) {
         </div>
         <div className={styles.listArea}>
           <ul className={styles.list}>
-            <li><p className={styles.comment}>Zodiac: </p></li>
+            {/* <li><p className={styles.comment}>Zodiac: </p></li> */}
             <li><p className={styles.createdAt}>Created At: {personality.created_at}</p></li>
             <li><p className={styles.comment}>Comment: {personality.comment}</p></li>
-            <li><p className={styles.updatedAt}>Updated At:</p></li>
+            {/* <li><p className={styles.updatedAt}>Updated At:</p></li> */}
           </ul>
         </div>
       </Link>
