@@ -1,6 +1,6 @@
 .card {
   margin-top: 8rem;
-  min-height: 20rem;
+  min-height: 25rem;
   min-width: 30rem;
   padding: 5%;
   display: flex;
@@ -33,9 +33,9 @@
 
 
 
-.subTitle {
-
-}
+/* .title {
+  margin-bottom: 0;
+} */
 
 .imgBtnArea {
   width: 100%;
