@@ -145,8 +145,7 @@ const Result = ({ profile, handleLogout, user }) => {
 
           <div className={styles.buttonArea}>
             <Link className={styles.link} to='/personalities/new'><Button className={styles.retakeButton} name="Re-take" color="#FF6969"/> </Link>
-            <Link className={styles.link} to='/personalities'><Button className={styles.ListButton} name="List" color="#6661F1"/> </Link>
-
+            <Link className={styles.link} to='/personalities'><Button className={styles.listButton} name="List" color="#6661F1"/> </Link>
           </div>
 
           <div className={styles.footer}>
