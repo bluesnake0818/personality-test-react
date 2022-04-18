@@ -44,8 +44,8 @@
 .nextButton {
   position: absolute;
   width: 10rem;
-  top: 50%;
-  right: 10%;
+  top: 45%;
+  right: 5%;
   font-size: 2rem;
   color: #000000;
   z-index: 10;

@@ -1,7 +1,7 @@
 .card {
   margin-top: 8rem;
-  min-height: 56rem;
-  width: 40rem;
+  min-height: 45rem;
+  min-width: 30rem;
   padding: 5%;
   display: flex;
   flex-direction: column;
@@ -16,17 +16,16 @@
 
 .questionArea {
   width: 100%;
-  
 }
 
 .questionNo {
   color: #FF6969;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .question {
   color: #6661F1;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 
@@ -47,7 +46,7 @@
 }
 
 .listItem {
-  min-height: 6rem;
+  min-height: 4rem;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -55,7 +54,7 @@
 }
 
 .choiceDesc {
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   width: 90%;
   color: #777777;
   text-align: left;
