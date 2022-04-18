@@ -22,7 +22,6 @@
 ## Technologies Used:
 - React, PostgreSQL, Flask, Express, CSS
 
-
 ## Credit 
 - Chart: https://www.youtube.com/watch?v=c_9c5zkfQ3Y (Worn Off Keys)
 - Layout references: 16 Personalities, 9-alike

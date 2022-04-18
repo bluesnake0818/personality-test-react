@@ -63,8 +63,6 @@ const Result = ({ profile, handleLogout, user }) => {
     zodIdx = 11
   } 
   
-  
-
   return (
     <div className={styles.container}>
       
