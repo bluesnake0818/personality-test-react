@@ -55,7 +55,7 @@ function PersonalityTest(props) {
       </div>
       <div className="form-container">
         <div className="body">{PageDisplay()}</div>
-        <div className="footer">
+        <div className={styles.footer}>
           <button className={styles.nextButton}
             onClick={ async (e) => {
               if(page === FormTitles.length - 1) {
