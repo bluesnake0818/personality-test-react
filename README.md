@@ -33,7 +33,7 @@
 - different avatars for different personality types
 - different types of tests
 - create ability for guest and associate the tests to profile
-- Create first and then associate --> (Save)
+- take test (Create) first and then associate --> (Save)
 - paginate or floating buttons
 - move to previous in multi-step form
 - form buttons
