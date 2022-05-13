@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import ReactGa from 'react-ga'
 import NavBar from './components/NavBar/NavBar'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import Signup from './pages/Signup/Signup'
@@ -24,7 +25,11 @@ const App = () => {
   })
   const [personalitiesLoaded, setPersonalitiesLoaded] = useState(false)
 
+  useEffect(() => { 
+    ReactGa.initialize('G-XHXE24G2T6')
 
+    ReactGa.pageview('/')
+  }, [])
 
   useEffect(()=> {
     if(user) {
