@@ -21,7 +21,7 @@ const App = () => {
   const navigate = useNavigate()
   const [user, setUser] = useState(authService.getUser())
   const [profile, setProfile] = useState({
-    name: ''
+    name: '' 
   })
   const [personalitiesLoaded, setPersonalitiesLoaded] = useState(false)
 
