@@ -118,7 +118,7 @@ const Result = ({ profile, handleLogout, user }) => {
           </div>
 
           <h5 className={styles.category}>Meet more friends at hangfive app</h5>
-          <a className={styles.downloadCard} href="https://apps.apple.com/us/app/hang5-find-your-zodiac-bff/id1531290410" target="_blank">
+          <a className={styles.downloadCard} href="https://hangfive.page.link/HrGD" target="_blank">
             <img src='/app_store.png' alt="" className={styles.appStoreImg}/>
             <img src='/app_preview.png' alt="" className={styles.appPreviewImg}/>
           </a>
